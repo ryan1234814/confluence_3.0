@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+/*
+ * Confluence 3.0 design tokens.
+ * Palette derived from Rajagiri's visual identity:
+ *  - Navy (#0A2540): primary elements
+ *  - Crimson (#DC2626): highlights & badges
+ *  - Gold (#D97706) / Silver (#94A3B8): Silver Jubilee details
+ *  - White / Slate: light-mode surfaces
+ */
+@theme {
+  --color-navy: #0a2540;
+  --color-navy-dark: #071d33;
+  --color-crimson: #dc2626;
+  --color-gold: #d97706;
+  --color-silver: #94a3b8;
+
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Space Grotesk", "Inter", ui-sans-serif, system-ui,
+    sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
