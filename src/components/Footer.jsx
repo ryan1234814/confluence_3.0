@@ -1,3 +1,5 @@
+import { Calendar, MapPin } from "lucide-react";
+
 const QUICK_LINKS = [
   { label: "Home", href: "#home" },
   { label: "Confluence Days", href: "#confluence-days" },
@@ -9,22 +11,25 @@ const QUICK_LINKS = [
   { label: "Register Now", href: "#register" },
 ];
 
-const INSTITUTIONS = [
-  { abbr: "RSET", name: "Rajagiri School of Engineering and Technology" },
-];
-
 export default function Footer() {
   return (
     <footer className="bg-slate-50">
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
-          {/* Column 1 — Official logo */}
-          <div>
-            <img
-              src={`${import.meta.env.BASE_URL}images/rset-silver-jubilee-logo.png`}
-              alt="RSET Silver Jubilee"
-              className="h-24 w-auto bg-white sm:h-32"
-            />
+        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+          {/* Column 1 — Brand: logo + tagline */}
+          <div className="max-w-xs">
+            <div className="inline-block rounded-xl bg-white p-3 shadow-sm">
+              <img
+                src={`${import.meta.env.BASE_URL}images/rset-silver-jubilee-logo.png`}
+                alt="RSET Silver Jubilee — Confluence 3.0"
+                className="h-16 w-auto sm:h-20"
+              />
+            </div>
+            <p className="mt-5 text-sm leading-relaxed text-slate-600">
+              The largest industry–academia summit hosted by the Rajagiri
+              School of Engineering and Technology (RSET), celebrating its
+              Silver Jubilee.
+            </p>
           </div>
 
           {/* Column 2 — Quick links */}
@@ -46,45 +51,30 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3 — Participating institution */}
-          <div>
-            <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-navy">
-              Participating Institution
-            </h3>
-            <ul className="mt-5 space-y-4">
-              {INSTITUTIONS.map((institution) => (
-                <li key={institution.abbr} className="text-sm leading-snug">
-                  <span className="font-semibold text-navy">
-                    {institution.abbr}
-                  </span>
-                  <span className="block text-slate-500">
-                    {institution.name}
-                  </span>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Column 4 — Contact & venue details */}
+          {/* Column 3 — Contact & venue */}
           <div>
             <h3 className="text-xs font-bold uppercase tracking-[0.18em] text-navy">
               Contact &amp; Venue
             </h3>
             <ul className="mt-5 space-y-4 text-sm text-slate-600">
-              <li>
-                Rajagiri Valley, Kakkanad,
-                <br />
-                Kochi, Kerala 682 039, India
+              <li className="flex items-start gap-3">
+                <MapPin
+                  className="mt-0.5 h-4 w-4 shrink-0 text-crimson"
+                  aria-hidden="true"
+                />
+                <span>
+                  Rajagiri Valley, Kakkanad,
+                  <br />
+                  Kochi, Kerala 682 039, India
+                </span>
               </li>
-              <li>
-                <a
-                  href="mailto:confluence@rajagiri.edu"
-                  className="transition-colors hover:text-navy"
-                >
-                  confluence@rajagiri.edu
-                </a>
+              <li className="flex items-start gap-3">
+                <Calendar
+                  className="mt-0.5 h-4 w-4 shrink-0 text-crimson"
+                  aria-hidden="true"
+                />
+                <span>September 1, 2026 · 10:00 AM IST</span>
               </li>
-              <li>September 1, 2026 · 10:00 AM IST</li>
             </ul>
           </div>
         </div>

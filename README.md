@@ -19,9 +19,8 @@ summit hosted by the **Rajagiri School of Engineering and Technology
   GMT+0530), rendered as Days : Hours : Minutes : Seconds cards.
 - **Registration band** — CTA section anchoring "Register Now" /
   "Get Summit Pass".
-- **4-column footer** — About & co-branded logos, Quick Links, Participating
-  Institution (RSET), and Contact & Venue, plus a sub-footer with copyright,
-  Privacy Policy, and social links.
+- **3-column footer** — About & co-branded logos, Quick Links, and Contact &
+  Venue, plus a sub-footer with copyright, Privacy Policy, and social links.
 
 ## Tech Stack
 
@@ -107,7 +106,6 @@ Typography loads via Google Fonts in `index.html` (Inter + Space Grotesk).
 - **Countdown target** — change `TARGET_TIMESTAMP_MS` in
   `src/components/Countdown.jsx` (currently `1788237600000`).
 - **Nav links** — edit `NAV_LINKS` in `src/components/Navbar.jsx`.
-- **Institution list** — edit `INSTITUTIONS` in `src/components/Footer.jsx`.
 - **Contact email / social links** — replace the placeholder
   `confluence@rajagiri.edu` and `href="#"` values in `src/components/Footer.jsx`
   and `src/components/Register.jsx`.
