@@ -120,3 +120,13 @@ Typography loads via Google Fonts in `index.html` (Inter + Space Grotesk).
 The build output is fully static — deploy `dist/` to any static host
 (Netlify, Vercel, GitHub Pages, nginx, S3, etc.) with no server-side
 configuration required.
+
+## CI/CD
+
+Pushes to `main` trigger the GitHub Actions workflow
+(`.github/workflows/static.yml`), which runs in three stages:
+
+1. **build** — installs dependencies with `npm ci` and runs `npm run build`
+2. **report-build-status** — posts the build result as a commit status
+3. **deploy** — publishes the built site to GitHub Pages (only after a
+   successful build)
