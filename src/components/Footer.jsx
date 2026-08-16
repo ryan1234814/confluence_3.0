@@ -27,11 +27,6 @@ export default function Footer() {
                 className="h-16 w-auto sm:h-20"
               />
             </div>
-            <p className="mt-5 text-sm leading-relaxed text-slate-600">
-              The largest industry–academia summit hosted by the Rajagiri
-              School of Engineering and Technology (RSET), celebrating its
-              Silver Jubilee.
-            </p>
           </div>
 
           {/* Column 2 — Quick links */}

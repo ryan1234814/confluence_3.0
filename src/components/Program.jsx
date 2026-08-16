@@ -60,7 +60,12 @@ export default function Program() {
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">
             Programme Overview
           </p>
-          <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-navy sm:text-4xl">
+          <p className="mt-4 text-slate-600">
+            The largest industry–academia summit hosted by the Rajagiri School
+            of Engineering and Technology (Autonomous), celebrating its Silver
+            Jubilee.
+          </p>
+          <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-navy sm:text-4xl">
             Explore the Summit
           </h2>
           <p className="mt-4 text-slate-600">
