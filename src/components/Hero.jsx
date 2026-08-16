@@ -34,7 +34,7 @@ export default function Hero() {
           <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-slate-600 sm:text-lg">
             Hosted by the{" "}
             <strong className="font-semibold text-navy">
-              Rajagiri School of Engineering and Technology (RSET)
+              Rajagiri School of Engineering and Technology (Autonomous)
             </strong>
             , Confluence 3.0 brings together industry leaders, academics, and
             innovators for a landmark Silver Jubilee edition of dialogue,

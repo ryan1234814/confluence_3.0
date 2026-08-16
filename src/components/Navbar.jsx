@@ -18,10 +18,10 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-md">
       <nav
         aria-label="Primary"
-        className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-3 px-4 sm:h-24 sm:px-6 lg:px-8"
+        className="mx-auto flex min-h-20 max-w-7xl items-center justify-between gap-3 px-4 py-2 sm:min-h-24 sm:px-6 sm:py-3 lg:px-8"
       >
-        {/* Branding: official RSET Silver Jubilee logo */}
-        <div className="flex min-w-0 items-center">
+        {/* Branding: official RSET Silver Jubilee logo + Confluence 3.0 logo */}
+        <div className="flex min-w-0 flex-wrap items-center gap-x-5 gap-y-1">
           <a href="#home" aria-label="RSET Silver Jubilee — Confluence 3.0">
             <img
               src={`${import.meta.env.BASE_URL}images/rset-silver-jubilee-logo.png`}
@@ -29,6 +29,11 @@ export default function Navbar() {
               className="h-16 w-auto sm:h-20"
             />
           </a>
+          <img
+            src={`${import.meta.env.BASE_URL}images/confluence_logo.jpeg`}
+            alt="Confluence 3.0 — The Largest Industry–Academia Summit"
+            className="h-8 w-auto sm:h-10"
+          />
         </div>
 
         {/* Desktop navigation */}
