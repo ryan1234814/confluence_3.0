@@ -22,17 +22,22 @@ const CTA_BUTTONS = (
 export default function Hero() {
   return (
     <section id="home" className="scroll-mt-20">
-      {/* Mobile / portrait: show the full image uncropped (natural aspect ratio) */}
+      {/* Mobile / tablets: responsive cover crop with the center as the focal
+          point. The box is kept at least 4:3 so the full "CONFLUENCE 3.0"
+          title (which spans the central ~57% of the image) is never cropped —
+          only the outer audience/background is trimmed on narrow screens. */}
       <div className="lg:hidden">
-        <img
-          src={`${import.meta.env.BASE_URL}images/new_home.png`}
-          alt="Confluence 3.0 — The Largest Industry–Academia Summit"
-          className="h-auto w-full"
-        />
+        <div className="relative h-[75vw] overflow-hidden sm:h-[min(56.25vw,85vh)]">
+          <img
+            src={`${import.meta.env.BASE_URL}images/new_home.png`}
+            alt="Confluence 3.0 — The Largest Industry–Academia Summit"
+            className="absolute inset-0 h-full w-full object-cover object-center"
+          />
+        </div>
         <div className="bg-[#070b14] px-4 py-6">{CTA_BUTTONS}</div>
       </div>
 
-      {/* Desktop / laptop: full-bleed cover background */}
+      {/* Desktop / laptop: full-bleed cover background (unchanged look) */}
       <div className="relative hidden overflow-hidden lg:block">
         <img
           src={`${import.meta.env.BASE_URL}images/new_home.png`}
@@ -44,7 +49,7 @@ export default function Hero() {
           aria-hidden="true"
           className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/60 to-transparent"
         />
-        <div className="relative mx-auto flex min-h-[70vh] max-w-7xl flex-col items-center justify-end px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
+        <div className="relative mx-auto flex min-h-[min(70vh,75vw)] max-w-7xl flex-col items-center justify-end px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
           {CTA_BUTTONS}
         </div>
       </div>
