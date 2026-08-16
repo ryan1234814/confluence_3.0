@@ -56,11 +56,6 @@ export default function Navbar() {
               className="h-16 w-auto sm:h-20"
             />
           </a>
-          <img
-            src={`${import.meta.env.BASE_URL}images/confluence_logo.jpeg`}
-            alt="Confluence 3.0 — The Largest Industry–Academia Summit"
-            className="h-8 w-auto sm:h-10"
-          />
         </div>
 
         {/* Desktop navigation */}
