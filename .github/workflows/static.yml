@@ -9,16 +9,15 @@ permissions:
   contents: read
   pages: write
   id-token: write
+  statuses: write
 
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  build:
+    name: Build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -35,6 +34,65 @@ jobs:
 
       - name: Build project
         run: npm run build
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: ./dist
+          retention-days: 1
+
+  report-build-status:
+    name: Report build status
+    needs: build
+    runs-on: ubuntu-latest
+    # Always run so failures are reported too
+    if: always()
+    steps:
+      - name: Report build status to commit
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          STATE: ${{ needs.build.result }}
+        run: |
+          case "$STATE" in
+            success)
+              DESC="Build succeeded"
+              STATUS="success"
+              ;;
+            failure)
+              DESC="Build failed"
+              STATUS="failure"
+              ;;
+            cancelled)
+              DESC="Build cancelled"
+              STATUS="error"
+              ;;
+            *)
+              # skipped: nothing to report
+              exit 0
+              ;;
+          esac
+          curl -sS -o /dev/null -X POST \
+            -H "Authorization: Bearer ${GITHUB_TOKEN}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/${GITHUB_REPOSITORY}/statuses/${GITHUB_SHA}" \
+            -d "{\"state\":\"${STATUS}\",\"context\":\"build\",\"description\":\"${DESC}\",\"target_url\":\"${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${GITHUB_RUN_ID}\"}"
+
+  deploy:
+    name: Deploy
+    # Runs only when the build job succeeds
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: site
+          path: ./dist
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
