@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Calendar, MapPin } from "lucide-react";
 
 const QUICK_LINKS = [
@@ -9,6 +10,7 @@ const QUICK_LINKS = [
   { label: "Sponsors", href: "#sponsors" },
   { label: "Media", href: "#media" },
   { label: "Register Now", href: "#register" },
+  { label: "Contact", path: "/contact" },
 ];
 
 export default function Footer() {
@@ -39,13 +41,22 @@ export default function Footer() {
             </h3>
             <ul className="mt-5 space-y-3">
               {QUICK_LINKS.map((link) => (
-                <li key={`${link.href}-${link.label}`}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-slate-600 transition-colors hover:text-navy"
-                  >
-                    {link.label}
-                  </a>
+                <li key={`${link.path ?? link.href}-${link.label}`}>
+                  {link.path ? (
+                    <Link
+                      to={link.path}
+                      className="text-sm text-slate-600 transition-colors hover:text-navy"
+                    >
+                      {link.label}
+                    </Link>
+                  ) : (
+                    <a
+                      href={link.href}
+                      className="text-sm text-slate-600 transition-colors hover:text-navy"
+                    >
+                      {link.label}
+                    </a>
+                  )}
                 </li>
               ))}
             </ul>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const NAV_LINKS = [
@@ -9,7 +10,33 @@ const NAV_LINKS = [
   { label: "Speakers", href: "#speakers" },
   { label: "Sponsors", href: "#sponsors" },
   { label: "Media", href: "#media" },
+  { label: "Contact", path: "/contact" },
 ];
+
+function renderLink(link, className, onNavigate) {
+  if (link.path) {
+    return (
+      <Link
+        key={link.path}
+        to={link.path}
+        className={className}
+        onClick={onNavigate}
+      >
+        {link.label}
+      </Link>
+    );
+  }
+  return (
+    <a
+      key={link.href}
+      href={link.href}
+      className={className}
+      onClick={onNavigate}
+    >
+      {link.label}
+    </a>
+  );
+}
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -38,15 +65,9 @@ export default function Navbar() {
 
         {/* Desktop navigation */}
         <div className="hidden items-center gap-6 lg:flex">
-          {NAV_LINKS.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="whitespace-nowrap text-sm font-medium text-slate-600 transition-colors hover:text-navy"
-            >
-              {link.label}
-            </a>
-          ))}
+          {NAV_LINKS.map((link) =>
+            renderLink(link, "whitespace-nowrap text-sm font-medium text-slate-600 transition-colors hover:text-navy")
+          )}
         </div>
 
         {/* Mobile menu toggle */}
@@ -66,16 +87,13 @@ export default function Navbar() {
       {open && (
         <div id="mobile-menu" className="border-t border-slate-200 bg-white px-4 pb-4 pt-2 lg:hidden">
           <div className="flex flex-col gap-1">
-            {NAV_LINKS.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                onClick={() => setOpen(false)}
-                className="rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50 hover:text-navy"
-              >
-                {link.label}
-              </a>
-            ))}
+            {NAV_LINKS.map((link) =>
+              renderLink(
+                link,
+                "rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50 hover:text-navy",
+                () => setOpen(false)
+              )
+            )}
           </div>
         </div>
       )}
