@@ -62,9 +62,9 @@ export default function Countdown() {
             The summit has begun — welcome to Confluence 3.0!
           </p>
         ) : (
-          <div className="mt-12 flex items-stretch justify-center">
+          <div className="mt-12 flex flex-wrap items-stretch justify-center gap-y-4">
             {UNITS.map(({ key, label }, index) => (
-              <div key={key} className="flex items-center gap-2 sm:gap-4">
+              <div key={key} className="flex items-center gap-1.5 sm:gap-4">
                 {index > 0 && (
                   <span
                     aria-hidden="true"
@@ -73,8 +73,8 @@ export default function Countdown() {
                     :
                   </span>
                 )}
-                <div className="w-[4.5rem] rounded-xl bg-white px-2 py-4 shadow-sm sm:w-24 sm:py-5">
-                  <p className="font-display text-3xl font-bold tabular-nums text-navy sm:text-4xl">
+                <div className="w-16 rounded-xl bg-white px-1.5 py-3.5 shadow-sm sm:w-24 sm:px-2 sm:py-5">
+                  <p className="font-display text-2xl font-bold tabular-nums text-navy sm:text-4xl">
                     {String(timeLeft[key]).padStart(2, "0")}
                   </p>
                   <p className="mt-1 text-[10px] font-semibold uppercase tracking-[0.15em] text-slate-500 sm:text-[11px]">
