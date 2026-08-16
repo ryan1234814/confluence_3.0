@@ -57,13 +57,17 @@ export default function Program() {
     <section id="program" className="scroll-mt-20 border-b border-slate-200 bg-white">
       <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-24 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">
+          <p className="text-base font-bold uppercase tracking-[0.2em] text-gold sm:text-lg">
             Programme Overview
           </p>
-          <p className="mt-4 text-slate-600">
+          <p className="mx-auto mt-4 max-w-3xl text-left leading-relaxed text-slate-600">
             The largest industry–academia summit hosted by the Rajagiri School
             of Engineering and Technology (Autonomous), celebrating its Silver
-            Jubilee.
+            Jubilee. Marking 25 years of academic excellence, this summit
+            brings together industry leaders, distinguished academics, and
+            budding innovators under one roof — to exchange ideas, forge
+            collaborations, and shape the future of engineering, management,
+            and the applied sciences.
           </p>
           <h2 className="mt-4 font-display text-3xl font-bold tracking-tight text-navy sm:text-4xl">
             Explore the Summit

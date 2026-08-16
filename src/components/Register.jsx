@@ -4,7 +4,7 @@ export default function Register() {
   return (
     <section id="register" className="scroll-mt-20 border-b border-slate-200 bg-white">
       <div className="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 sm:py-20 lg:px-8">
-        <p className="text-xs font-bold uppercase tracking-[0.2em] text-crimson">
+        <p className="text-base font-bold uppercase tracking-[0.2em] text-crimson sm:text-lg">
           Registration Open
         </p>
         <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-navy sm:text-4xl">
