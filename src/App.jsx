@@ -1,12 +1,12 @@
 import { useEffect } from "react";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
-import Navbar from "./components/Navbar.jsx";
-import Hero from "./components/Hero.jsx";
-import Program from "./components/Program.jsx";
-import Countdown from "./components/Countdown.jsx";
-import Register from "./components/Register.jsx";
-import Contact from "./components/Contact.jsx";
-import Footer from "./components/Footer.jsx";
+import Navbar from "./components/Navbar/Navbar.jsx";
+import Hero from "./components/Hero/Hero.jsx";
+import Program from "./components/Program/Program.jsx";
+import Countdown from "./components/Countdown/Countdown.jsx";
+import Register from "./components/Register/Register.jsx";
+import Contact from "./components/Contact/Contact.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 
 function Home() {
   return (

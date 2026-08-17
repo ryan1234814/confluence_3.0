@@ -75,20 +75,27 @@ npm run preview
     ├── App.jsx                     # Page composition
     ├── index.css                   # Tailwind entry + design tokens (@theme)
     └── components/
-        ├── Navbar.jsx              # Sticky header + mobile menu
-        ├── Navbar.css              # Plain CSS for the navbar
-        ├── Hero.jsx                # Title, tagline, institutions, CTAs
-        ├── Hero.css                # Plain CSS for the hero
-        ├── Program.jsx             # Programme overview grid (anchor targets)
-        ├── Program.css             # Plain CSS for the programme grid
-        ├── Countdown.jsx           # Live countdown timer
-        ├── Countdown.css           # Plain CSS for the countdown
-        ├── Register.jsx            # Registration CTA band
-        ├── Register.css            # Plain CSS for the registration band
-        ├── Contact.jsx             # Contact page (cards, form, map)
-        ├── Contact.css             # Plain CSS for the contact page
-        ├── Footer.jsx              # 4-column footer + sub-footer
-        └── Footer.css              # Plain CSS for the footer
+        ├── Navbar/
+        │   ├── Navbar.jsx           # Sticky header + mobile menu
+        │   └── Navbar.css           # Plain CSS for the navbar
+        ├── Hero/
+        │   ├── Hero.jsx             # Title, tagline, institutions, CTAs
+        │   └── Hero.css             # Plain CSS for the hero
+        ├── Program/
+        │   ├── Program.jsx          # Programme overview grid (anchor targets)
+        │   └── Program.css          # Plain CSS for the programme grid
+        ├── Countdown/
+        │   ├── Countdown.jsx        # Live countdown timer
+        │   └── Countdown.css        # Plain CSS for the countdown
+        ├── Register/
+        │   ├── Register.jsx         # Registration CTA band
+        │   └── Register.css         # Plain CSS for the registration band
+        ├── Contact/
+        │   ├── Contact.jsx          # Contact page (cards, form, map)
+        │   └── Contact.css          # Plain CSS for the contact page
+        └── Footer/
+            ├── Footer.jsx           # 4-column footer + sub-footer
+            └── Footer.css           # Plain CSS for the footer
 ```
 
 ## Design System
@@ -112,15 +119,15 @@ Typography loads via Google Fonts in `index.html` (Inter + Space Grotesk).
 ## Customization
 
 - **Countdown target** — change `TARGET_TIMESTAMP_MS` in
-  `src/components/Countdown.jsx` (currently `1788237600000`).
-- **Nav links** — edit `NAV_LINKS` in `src/components/Navbar.jsx`.
+  `src/components/Countdown/Countdown.jsx` (currently `1788237600000`).
+- **Nav links** — edit `NAV_LINKS` in `src/components/Navbar/Navbar.jsx`.
 - **Contact email / social links** — replace the placeholder
-  `confluence@rajagiri.edu` and `href="#"` values in `src/components/Footer.jsx`
-  and `src/components/Register.jsx`.
+  `confluence@rajagiri.edu` and `href="#"` values in
+  `src/components/Footer/Footer.jsx` and `src/components/Register/Register.jsx`.
 - **Logo** — the header and footer both use `public/images/rset-silver-jubilee-logo.png`
   (a web-sized copy of the original artwork). Replace that file to update the
-  branding; it is referenced from `src/components/Navbar.jsx` and
-  `src/components/Footer.jsx`.
+  branding; it is referenced from `src/components/Navbar/Navbar.jsx` and
+  `src/components/Footer/Footer.jsx`.
 - **Colors / fonts** — update the `@theme` block in `src/index.css`.
 
 ## Deployment
