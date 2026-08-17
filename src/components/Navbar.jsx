@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import "./Navbar.css";
 
 const NAV_LINKS = [
   { label: "Home", href: "#home" },
@@ -42,26 +43,23 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 backdrop-blur-md">
-      <nav
-        aria-label="Primary"
-        className="mx-auto flex min-h-20 max-w-7xl items-center justify-between gap-3 px-4 py-2 sm:min-h-24 sm:px-6 sm:py-3 lg:px-8"
-      >
+    <header className="navbar">
+      <nav aria-label="Primary" className="navbar__nav">
         {/* Branding: official RSET Silver Jubilee logo + Confluence 3.0 logo */}
-        <div className="flex min-w-0 flex-wrap items-center gap-x-5 gap-y-1">
+        <div className="navbar__brand">
           <a href="#home" aria-label="RSET Silver Jubilee — Confluence 3.0">
             <img
               src={`${import.meta.env.BASE_URL}images/rset-silver-jubilee-logo.png`}
               alt="RSET Silver Jubilee"
-              className="h-16 w-auto sm:h-20"
+              className="navbar__logo"
             />
           </a>
         </div>
 
         {/* Desktop navigation */}
-        <div className="hidden items-center gap-6 lg:flex">
+        <div className="navbar__links">
           {NAV_LINKS.map((link) =>
-            renderLink(link, "whitespace-nowrap text-sm font-medium text-slate-600 transition-colors hover:text-navy")
+            renderLink(link, "navbar__link")
           )}
         </div>
 
@@ -72,20 +70,20 @@ export default function Navbar() {
           aria-expanded={open}
           aria-controls="mobile-menu"
           aria-label="Toggle navigation menu"
-          className="rounded-lg p-2 text-slate-600 transition-colors hover:bg-slate-100 lg:hidden"
+          className="navbar__toggle"
         >
-          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          {open ? <X className="navbar__toggle-icon" /> : <Menu className="navbar__toggle-icon" />}
         </button>
       </nav>
 
       {/* Mobile navigation panel */}
       {open && (
-        <div id="mobile-menu" className="border-t border-slate-200 bg-white px-4 pb-4 pt-2 lg:hidden">
-          <div className="flex flex-col gap-1">
+        <div id="mobile-menu" className="navbar__mobile-menu">
+          <div className="navbar__mobile-links">
             {NAV_LINKS.map((link) =>
               renderLink(
                 link,
-                "rounded-lg px-3 py-2.5 text-sm font-medium text-slate-700 transition-colors hover:bg-slate-50 hover:text-navy",
+                "navbar__mobile-link",
                 () => setOpen(false)
               )
             )}

@@ -1,0 +1,139 @@
+.program {
+  scroll-margin-top: 5rem;
+  border-bottom: 1px solid #e2e8f0;
+  background-color: #ffffff;
+}
+
+.program__container {
+  margin-inline: auto;
+  max-width: 80rem;
+  padding: 5rem 1rem;
+}
+
+@media (min-width: 640px) {
+  .program__container {
+    padding: 6rem 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .program__container {
+    padding-inline: 2rem;
+  }
+}
+
+.program__header {
+  margin-inline: auto;
+  max-width: 42rem;
+  text-align: center;
+}
+
+.program__eyebrow {
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #d97706;
+}
+
+@media (min-width: 640px) {
+  .program__eyebrow {
+    font-size: 1.125rem;
+  }
+}
+
+.program__intro {
+  margin: 1rem auto 0;
+  max-width: 48rem;
+  text-align: left;
+  line-height: 1.625;
+  color: #475569;
+}
+
+.program__title {
+  margin-top: 1rem;
+  font-family: var(--font-display);
+  font-size: 1.875rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  color: #0a2540;
+}
+
+@media (min-width: 640px) {
+  .program__title {
+    font-size: 2.25rem;
+  }
+}
+
+.program__subtitle {
+  margin-top: 1rem;
+  color: #475569;
+}
+
+.program__grid {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  background-color: #e2e8f0;
+}
+
+@media (min-width: 640px) {
+  .program__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .program__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.program__card {
+  scroll-margin-top: 6rem;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  transition: background-color 150ms ease;
+}
+
+.program__card:hover {
+  background-color: #f8fafc;
+}
+
+@media (min-width: 640px) {
+  .program__card {
+    padding: 2rem;
+  }
+}
+
+.program__card-icon {
+  display: inline-flex;
+  border-radius: 0.5rem;
+  background-color: #f1f5f9;
+  padding: 0.625rem;
+  color: #0a2540;
+}
+
+.program__card-icon svg {
+  height: 1.25rem;
+  width: 1.25rem;
+}
+
+.program__card-title {
+  margin-top: 1rem;
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #0a2540;
+}
+
+.program__card-text {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.625;
+  color: #475569;
+}

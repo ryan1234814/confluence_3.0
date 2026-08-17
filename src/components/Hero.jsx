@@ -1,19 +1,20 @@
 import { ArrowRight, Ticket } from "lucide-react";
+import "./Hero.css";
 
 const CTA_BUTTONS = (
-  <div className="flex flex-wrap items-center justify-center gap-3">
+  <div className="hero__ctas">
     <a
       href="#program"
-      className="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-6 py-3.5 text-sm font-semibold text-navy shadow-sm transition-colors hover:bg-slate-100"
+      className="hero__cta hero__cta--primary"
     >
       Explore Events
-      <ArrowRight className="h-4 w-4" />
+      <ArrowRight className="hero__cta-icon" />
     </a>
     <a
       href="#register"
-      className="inline-flex items-center justify-center gap-2 rounded-lg border border-white/25 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-colors hover:border-white/50 hover:bg-white/10"
+      className="hero__cta hero__cta--ghost"
     >
-      <Ticket className="h-4 w-4" />
+      <Ticket className="hero__cta-icon" />
       Get Summit Pass
     </a>
   </div>
@@ -21,37 +22,32 @@ const CTA_BUTTONS = (
 
 export default function Hero() {
   return (
-    <section id="home" className="scroll-mt-20">
+    <section id="home" className="hero">
       {/* Mobile / tablets: responsive cover crop with the center as the focal
           point. The box is kept at least 4:3 so the full "CONFLUENCE 3.0"
           title (which spans the central ~57% of the image) is never cropped —
           only the outer audience/background is trimmed on narrow screens. */}
-      <div className="lg:hidden">
-        <div className="relative h-[75vw] overflow-hidden sm:h-[min(56.25vw,85vh)]">
+      <div className="hero__mobile">
+        <div className="hero__mobile-image">
           <img
             src={`${import.meta.env.BASE_URL}images/new_home1.png`}
             alt="Confluence 3.0 — The Largest Industry–Academia Summit"
-            className="absolute inset-0 h-full w-full object-cover object-center"
+            className="hero__image"
           />
         </div>
-        <div className="bg-[#070b14] px-4 py-6">{CTA_BUTTONS}</div>
+        <div className="hero__mobile-ctas">{CTA_BUTTONS}</div>
       </div>
 
       {/* Desktop / laptop: full-bleed cover background (unchanged look) */}
-      <div className="relative hidden overflow-hidden lg:block">
+      <div className="hero__desktop">
         <img
           src={`${import.meta.env.BASE_URL}images/new_home1.png`}
           alt="Confluence 3.0 — The Largest Industry–Academia Summit"
-          className="absolute inset-0 h-full w-full object-cover object-center"
+          className="hero__image"
         />
         {/* Soft scrim at the bottom so the CTAs stay readable */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-black/60 to-transparent"
-        />
-        <div className="relative mx-auto flex min-h-[min(70vh,75vw)] max-w-7xl flex-col items-center justify-end px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-          {CTA_BUTTONS}
-        </div>
+        <div aria-hidden="true" className="hero__scrim" />
+        <div className="hero__content">{CTA_BUTTONS}</div>
       </div>
     </section>
   );

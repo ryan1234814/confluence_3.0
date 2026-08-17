@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { CheckCircle2, Mail, MapPin, Phone, Send } from "lucide-react";
+import "./Contact.css";
 
 const CONTACT_CARDS = [
   {
@@ -33,8 +34,7 @@ const SUBJECT_OPTIONS = [
 
 const EMPTY_FORM = { name: "", email: "", subject: "", message: "" };
 
-const inputClasses =
-  "w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-sm text-slate-900 shadow-sm transition-colors placeholder:text-slate-400 focus:border-navy focus:outline-none focus:ring-2 focus:ring-navy/20";
+const inputClasses = "contact-form__input";
 
 export default function Contact() {
   const [form, setForm] = useState(EMPTY_FORM);
@@ -82,33 +82,17 @@ export default function Contact() {
   return (
     <>
       {/* Header banner */}
-      <section
-        id="contact"
-        className="relative scroll-mt-20 overflow-hidden border-b border-slate-200 bg-navy"
-      >
+      <section id="contact" className="contact-hero">
         {/* Subtle structured grid + soft gold wash over navy */}
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-0"
-          style={{
-            backgroundImage:
-              "linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px)",
-            backgroundSize: "48px 48px",
-          }}
-        />
-        <div
-          aria-hidden="true"
-          className="pointer-events-none absolute inset-x-0 top-0 h-72 bg-[radial-gradient(ellipse_at_top,rgba(217,119,6,0.18),transparent_65%)]"
-        />
+        <div aria-hidden="true" className="contact-hero__grid" />
+        <div aria-hidden="true" className="contact-hero__glow" />
 
-        <div className="relative mx-auto max-w-7xl px-4 py-20 text-center sm:px-6 sm:py-24 lg:px-8">
-          <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">
-            Get in Touch
-          </p>
-          <h1 className="mt-3 font-display text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Contact <span className="text-crimson">Us</span>
+        <div className="contact-hero__content">
+          <p className="contact-hero__eyebrow">Get in Touch</p>
+          <h1 className="contact-hero__title">
+            Contact <span className="contact-hero__title-accent">Us</span>
           </h1>
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
+          <p className="contact-hero__text">
             Get in Touch with Us — Whether you have questions about the
             conference, sponsorships, or registration, our team is ready to
             help.
@@ -117,29 +101,24 @@ export default function Contact() {
       </section>
 
       {/* Direct contact cards */}
-      <section className="border-b border-slate-200 bg-white">
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <section className="contact-cards">
+        <div className="contact-cards__container">
+          <div className="contact-cards__grid">
             {CONTACT_CARDS.map((card) => (
-              <div
-                key={card.label}
-                className="flex flex-col rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
-              >
-                <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-navy/5 text-navy">
-                  <card.icon className="h-5 w-5" aria-hidden="true" />
+              <div key={card.label} className="contact-cards__card">
+                <span className="contact-cards__icon">
+                  <card.icon aria-hidden="true" />
                 </span>
-                <h2 className="mt-4 text-xs font-bold uppercase tracking-[0.18em] text-slate-500">
-                  {card.label}
-                </h2>
+                <h2 className="contact-cards__label">{card.label}</h2>
                 {card.href ? (
                   <a
                     href={card.href}
-                    className="mt-2 text-sm font-medium text-navy transition-colors hover:text-crimson sm:text-base"
+                    className="contact-cards__value"
                   >
                     {card.value}
                   </a>
                 ) : (
-                  <p className="mt-2 text-sm leading-relaxed text-slate-700 sm:text-base">
+                  <p className="contact-cards__value--text">
                     {card.value}
                   </p>
                 )}
@@ -150,16 +129,12 @@ export default function Contact() {
       </section>
 
       {/* Inquiry form */}
-      <section className="border-b border-slate-200 bg-slate-50">
-        <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-          <div className="text-center">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-crimson">
-              Send an Inquiry
-            </p>
-            <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-navy sm:text-4xl">
-              How can we help?
-            </h2>
-            <p className="mt-4 text-slate-600">
+      <section className="contact-form">
+        <div className="contact-form__container">
+          <div className="contact-form__header">
+            <p className="contact-form__eyebrow">Send an Inquiry</p>
+            <h2 className="contact-form__title">How can we help?</h2>
+            <p className="contact-form__text">
               Fill in the form below and our team will get back to you as soon
               as possible.
             </p>
@@ -168,30 +143,30 @@ export default function Contact() {
           <form
             onSubmit={handleSubmit}
             noValidate
-            className="mt-10 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8"
+            className="contact-form__card"
           >
             {submitted && (
               <div
                 role="status"
                 aria-live="polite"
-                className="mb-6 flex items-start gap-3 rounded-xl border border-emerald-200 bg-emerald-50 p-4"
+                className="contact-form__success"
               >
                 <CheckCircle2
-                  className="mt-0.5 h-5 w-5 shrink-0 text-emerald-600"
+                  className="contact-form__success-icon"
                   aria-hidden="true"
                 />
-                <p className="text-sm leading-relaxed text-emerald-800">
-                  <strong className="font-semibold">Thank you!</strong> Your
-                  message has been sent. Our team will get back to you shortly.
+                <p className="contact-form__success-text">
+                  <strong>Thank you!</strong> Your message has been sent. Our
+                  team will get back to you shortly.
                 </p>
               </div>
             )}
 
-            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+            <div className="contact-form__row">
               <div>
                 <label
                   htmlFor="contact-name"
-                  className="mb-1.5 block text-sm font-semibold text-navy"
+                  className="contact-form__label"
                 >
                   Full Name
                 </label>
@@ -204,10 +179,10 @@ export default function Contact() {
                   placeholder="Your full name"
                   aria-invalid={Boolean(errors.name)}
                   aria-describedby={errors.name ? "contact-name-error" : undefined}
-                  className={`${inputClasses} ${errors.name ? "border-crimson" : ""}`}
+                  className={`${inputClasses} ${errors.name ? "contact-form__input--error" : ""}`}
                 />
                 {errors.name && (
-                  <p id="contact-name-error" className="mt-1.5 text-xs font-medium text-crimson">
+                  <p id="contact-name-error" className="contact-form__error">
                     {errors.name}
                   </p>
                 )}
@@ -216,7 +191,7 @@ export default function Contact() {
               <div>
                 <label
                   htmlFor="contact-email"
-                  className="mb-1.5 block text-sm font-semibold text-navy"
+                  className="contact-form__label"
                 >
                   Email Address
                 </label>
@@ -229,20 +204,20 @@ export default function Contact() {
                   placeholder="you@example.com"
                   aria-invalid={Boolean(errors.email)}
                   aria-describedby={errors.email ? "contact-email-error" : undefined}
-                  className={`${inputClasses} ${errors.email ? "border-crimson" : ""}`}
+                  className={`${inputClasses} ${errors.email ? "contact-form__input--error" : ""}`}
                 />
                 {errors.email && (
-                  <p id="contact-email-error" className="mt-1.5 text-xs font-medium text-crimson">
+                  <p id="contact-email-error" className="contact-form__error">
                     {errors.email}
                   </p>
                 )}
               </div>
             </div>
 
-            <div className="mt-6">
+            <div className="contact-form__field">
               <label
                 htmlFor="contact-subject"
-                className="mb-1.5 block text-sm font-semibold text-navy"
+                className="contact-form__label"
               >
                 Subject
               </label>
@@ -253,28 +228,28 @@ export default function Contact() {
                 onChange={handleChange}
                 aria-invalid={Boolean(errors.subject)}
                 aria-describedby={errors.subject ? "contact-subject-error" : undefined}
-                className={`${inputClasses} ${errors.subject ? "border-crimson" : ""} ${form.subject ? "" : "text-slate-400"}`}
+                className={`${inputClasses} ${errors.subject ? "contact-form__input--error" : ""} ${form.subject ? "" : "contact-form__input--placeholder"}`}
               >
                 <option value="" disabled>
                   Choose a subject…
                 </option>
                 {SUBJECT_OPTIONS.map((option) => (
-                  <option key={option} value={option} className="text-slate-900">
+                  <option key={option} value={option}>
                     {option}
                   </option>
                 ))}
               </select>
               {errors.subject && (
-                <p id="contact-subject-error" className="mt-1.5 text-xs font-medium text-crimson">
+                <p id="contact-subject-error" className="contact-form__error">
                   {errors.subject}
                 </p>
               )}
             </div>
 
-            <div className="mt-6">
+            <div className="contact-form__field">
               <label
                 htmlFor="contact-message"
-                className="mb-1.5 block text-sm font-semibold text-navy"
+                className="contact-form__label"
               >
                 Message
               </label>
@@ -287,10 +262,10 @@ export default function Contact() {
                 placeholder="Tell us how we can help…"
                 aria-invalid={Boolean(errors.message)}
                 aria-describedby={errors.message ? "contact-message-error" : undefined}
-                className={`${inputClasses} resize-y ${errors.message ? "border-crimson" : ""}`}
+                className={`${inputClasses} contact-form__input--textarea ${errors.message ? "contact-form__input--error" : ""}`}
               />
               {errors.message && (
-                <p id="contact-message-error" className="mt-1.5 text-xs font-medium text-crimson">
+                <p id="contact-message-error" className="contact-form__error">
                   {errors.message}
                 </p>
               )}
@@ -298,36 +273,31 @@ export default function Contact() {
 
             <button
               type="submit"
-              className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-navy px-6 py-3.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-navy-dark sm:w-auto"
+              className="contact-form__submit"
             >
               Send Message
-              <Send className="h-4 w-4" aria-hidden="true" />
+              <Send className="contact-form__submit-icon" aria-hidden="true" />
             </button>
           </form>
         </div>
       </section>
 
       {/* Our Location */}
-      <section className="bg-white">
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 sm:py-20 lg:px-8">
-          <div className="text-center">
-            <p className="text-xs font-bold uppercase tracking-[0.2em] text-crimson">
-              Find Us
-            </p>
-            <h2 className="mt-3 font-display text-3xl font-bold tracking-tight text-navy sm:text-4xl">
-              Our Location
-            </h2>
-            <p className="mt-4 text-slate-600">
+      <section className="contact-location">
+        <div className="contact-location__container">
+          <div className="contact-location__header">
+            <p className="contact-location__eyebrow">Find Us</p>
+            <h2 className="contact-location__title">Our Location</h2>
+            <p className="contact-location__text">
               Rajagiri School of Engineering &amp; Technology (RSET), Kakkanad,
               Kochi.
             </p>
           </div>
 
-          <div className="mt-10 overflow-hidden rounded-2xl border border-slate-200 shadow-sm">
+          <div className="contact-location__map">
             <iframe
               title="Rajagiri School of Engineering and Technology (RSET), Kakkanad on Google Maps"
               src="https://www.google.com/maps?q=Rajagiri%20School%20of%20Engineering%20and%20Technology%2C%20Kakkanad%2C%20Kochi&output=embed"
-              className="h-[420px] w-full"
               loading="lazy"
               allowFullScreen
               referrerPolicy="no-referrer-when-downgrade"

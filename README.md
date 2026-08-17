@@ -28,7 +28,7 @@ summit hosted by the **Rajagiri School of Engineering and Technology
 | ------------ | ---------------------------------------- |
 | Framework    | React 19 (functional components + hooks) |
 | Build tool   | Vite                                     |
-| Styling      | Tailwind CSS v4                          |
+| Styling      | Tailwind CSS v4 (tokens) + plain per-component CSS |
 | Icons        | lucide-react (+ inline SVG brand glyphs) |
 | State        | React `useState` / `useEffect`           |
 
@@ -76,11 +76,19 @@ npm run preview
     ├── index.css                   # Tailwind entry + design tokens (@theme)
     └── components/
         ├── Navbar.jsx              # Sticky header + mobile menu
+        ├── Navbar.css              # Plain CSS for the navbar
         ├── Hero.jsx                # Title, tagline, institutions, CTAs
+        ├── Hero.css                # Plain CSS for the hero
         ├── Program.jsx             # Programme overview grid (anchor targets)
+        ├── Program.css             # Plain CSS for the programme grid
         ├── Countdown.jsx           # Live countdown timer
+        ├── Countdown.css           # Plain CSS for the countdown
         ├── Register.jsx            # Registration CTA band
-        └── Footer.jsx              # 4-column footer + sub-footer
+        ├── Register.css            # Plain CSS for the registration band
+        ├── Contact.jsx             # Contact page (cards, form, map)
+        ├── Contact.css             # Plain CSS for the contact page
+        ├── Footer.jsx              # 4-column footer + sub-footer
+        └── Footer.css              # Plain CSS for the footer
 ```
 
 ## Design System
