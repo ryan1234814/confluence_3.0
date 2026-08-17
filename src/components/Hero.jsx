@@ -29,7 +29,7 @@ export default function Hero() {
       <div className="lg:hidden">
         <div className="relative h-[75vw] overflow-hidden sm:h-[min(56.25vw,85vh)]">
           <img
-            src={`${import.meta.env.BASE_URL}images/new_home.png`}
+            src={`${import.meta.env.BASE_URL}images/new_home1.png`}
             alt="Confluence 3.0 — The Largest Industry–Academia Summit"
             className="absolute inset-0 h-full w-full object-cover object-center"
           />
@@ -40,7 +40,7 @@ export default function Hero() {
       {/* Desktop / laptop: full-bleed cover background (unchanged look) */}
       <div className="relative hidden overflow-hidden lg:block">
         <img
-          src={`${import.meta.env.BASE_URL}images/new_home.png`}
+          src={`${import.meta.env.BASE_URL}images/new_home1.png`}
           alt="Confluence 3.0 — The Largest Industry–Academia Summit"
           className="absolute inset-0 h-full w-full object-cover object-center"
         />
