@@ -2,10 +2,30 @@
   position: sticky;
   top: 0;
   z-index: 50;
-  border-bottom: 1px solid #e2e8f0;
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(250, 245, 255, 0.92));
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 4px 20px -8px rgba(124, 58, 237, 0.12);
+}
+
+.navbar::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: linear-gradient(90deg,
+    #0ea5e9 0%,
+    #7c3aed 25%,
+    #e11d48 50%,
+    #f59e0b 75%,
+    #059669 100%);
+  opacity: 0.9;
 }
 
 .navbar__nav {
@@ -65,14 +85,37 @@
 
 .navbar__link {
   white-space: nowrap;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 500;
+  font-family: "Lora", Georgia, serif;
   color: #475569;
-  transition: color 150ms ease;
+  transition: color 150ms ease, background-color 150ms ease;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.navbar__link::after {
+  content: "";
+  position: absolute;
+  left: 0.75rem;
+  right: 0.75rem;
+  bottom: 0.125rem;
+  height: 2px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #7c3aed, #e11d48);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 200ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navbar__link:hover {
-  color: #0a2540;
+  color: #1e1b4b;
+  background: linear-gradient(135deg, rgba(237, 233, 254, 0.5), rgba(255, 228, 230, 0.4));
+}
+
+.navbar__link:hover::after {
+  transform: scaleX(1);
 }
 
 .navbar__toggle {
@@ -122,9 +165,10 @@
 .navbar__mobile-link {
   display: block;
   border-radius: 0.5rem;
-  padding: 0.625rem 0.75rem;
-  font-size: 0.875rem;
+  padding: 0.75rem 0.875rem;
+  font-size: 1rem;
   font-weight: 500;
+  font-family: "Lora", Georgia, serif;
   color: #334155;
   transition: background-color 150ms ease, color 150ms ease;
 }

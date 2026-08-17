@@ -1,26 +1,139 @@
 @import "tailwindcss";
 
 /*
- * Confluence 3.0 design tokens.
- * Palette derived from Rajagiri's visual identity:
- *  - Navy (#0A2540): primary elements
- *  - Crimson (#DC2626): highlights & badges
- *  - Gold (#D97706) / Silver (#94A3B8): Silver Jubilee details
- *  - White / Slate: light-mode surfaces
+ * Confluence 3.0 — Silver Jubilee Design System
+ * Editorial, warm, paper-like feel anchored in forest + teal accents.
  */
 @theme {
-  --color-navy: #0a2540;
-  --color-navy-dark: #071d33;
-  --color-crimson: #dc2626;
-  --color-gold: #d97706;
-  --color-silver: #94a3b8;
+  /* Warm neutral paper palette */
+  --color-paper-50: #fbf7f1;
+  --color-paper-100: #f5efe4;
+  --color-paper-200: #ece3d0;
+  --color-paper-300: #ddd0b4;
+  --color-ink-900: #1c2a24;
+  --color-ink-800: #243a33;
+  --color-ink-700: #344a42;
+  --color-ink-600: #4c635a;
+  --color-ink-500: #6a7f76;
+  --color-ink-400: #8ea098;
 
-  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif;
-  --font-display: "Space Grotesk", "Inter", ui-sans-serif, system-ui,
-    sans-serif;
+  /* Forest / teal accent system */
+  --color-forest-900: #0f3428;
+  --color-forest-800: #14532d;
+  --color-forest-700: #166534;
+  --color-forest-600: #15803d;
+  --color-forest-500: #1d7a5b;
+  --color-teal-700: #0f766e;
+  --color-teal-600: #0d9488;
+  --color-teal-500: #14b8a6;
+
+  /* Warm accent (crimson brick / burnt sienna) */
+  --color-terracotta: #b4533b;
+  --color-russet: #8a4a2b;
+  --color-gold-dark: #a16207;
+  --color-gold: #ca8a04;
+
+  /* Font pairing — editorial serif + clean sans */
+  --font-display: "Cormorant Garamond", "Instrument Serif", Georgia,
+    "Times New Roman", serif;
+  --font-serif: "Instrument Serif", "Cormorant Garamond", Georgia,
+    "Times New Roman", serif;
+  --font-sans: "Source Sans 3", "Inter", ui-sans-serif, system-ui,
+    -apple-system, Roboto, Arial, sans-serif;
+  --font-ui: "Inter", "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Source Sans 3", "Inter", ui-sans-serif, system-ui, -apple-system,
+    Roboto, Arial, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--color-ink-800);
+  background-color: var(--color-paper-50);
+  background-image:
+    radial-gradient(
+      1200px 600px at 10% -10%,
+      rgba(214, 189, 137, 0.18),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 500px at 100% 10%,
+      rgba(29, 122, 91, 0.08),
+      transparent 60%
+    ),
+    linear-gradient(180deg, #fbf7f1 0%, #f6efe1 100%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Typographic hierarchy */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Cormorant Garamond", "Instrument Serif", Georgia,
+    "Times New Roman", serif;
+  color: var(--color-ink-900);
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: clamp(2.25rem, 4.5vw, 3.75rem);
+  letter-spacing: -0.015em;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: clamp(1.5rem, 2.5vw, 2.125rem);
+  letter-spacing: -0.005em;
+  line-height: 1.2;
+}
+
+p {
+  color: var(--color-ink-700);
+}
+
+/* Utility: forest ink drop cap feel */
+.eyebrow {
+  font-family: "Source Sans 3", "Inter", sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  color: var(--color-forest-600);
+}
+
+/* Decorative rule */
+.hairline {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-paper-300),
+    transparent
+  );
+}
+
+/* Editorially balanced text utility */
+.serif-body {
+  font-family: "Instrument Serif", "Cormorant Garamond", Georgia, serif;
+  font-style: italic;
+  color: var(--color-ink-700);
 }
