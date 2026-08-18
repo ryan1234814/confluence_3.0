@@ -5,11 +5,13 @@ export default function Hero() {
     <section id="home" className="hero">
       <div className="hero__banner-container">
         <img
-          src={`${import.meta.env.BASE_URL}images/new_home1.png`}
+          src={`${import.meta.env.BASE_URL}images/new_home.png`}
           alt="Confluence 3.0 — The Largest Industry–Academia Summit"
           className="hero__image"
-          width="1454"
-          height="720"
+          width="1828"
+          height="1024"
+          loading="eager"
+          fetchPriority="high"
         />
         <div aria-hidden="true" className="hero__glow" />
       </div>

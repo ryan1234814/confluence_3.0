@@ -68,20 +68,18 @@
 .footer__logo-box {
   display: inline-block;
   border-radius: 0.75rem;
-  background:
-    linear-gradient(var(--color-paper-50), var(--color-paper-50)) padding-box,
-    linear-gradient(135deg, #0ea5e9, #7c3aed, #e11d48, #f59e0b) border-box;
+  background: transparent;
   border: 2px solid transparent;
   padding: 0.5rem;
   box-shadow:
     0 8px 20px -10px rgba(124, 58, 237, 0.3),
-    0 3px 8px -3px rgba(0, 0, 0, 0.1),
-    inset 0 1px 0 rgba(255, 255, 255, 0.95);
+    0 3px 8px -3px rgba(0, 0, 0, 0.1);
 }
 
 .footer__logo {
   height: 3rem;
   width: auto;
+  mix-blend-mode: multiply;
 }
 
 @media (min-width: 640px) {

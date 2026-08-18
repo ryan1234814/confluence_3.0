@@ -63,6 +63,7 @@
 .navbar__logo {
   height: 4rem;
   width: auto;
+  mix-blend-mode: multiply;
 }
 
 @media (min-width: 640px) {
