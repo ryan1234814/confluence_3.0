@@ -1,24 +1,4 @@
-import { ArrowRight, Ticket } from "lucide-react";
 import "./Hero.css";
-
-const CTA_BUTTONS = (
-  <div className="hero__ctas">
-    <a
-      href="#program"
-      className="hero__cta hero__cta--primary"
-    >
-      Explore Events
-      <ArrowRight className="hero__cta-icon" />
-    </a>
-    <a
-      href="#register"
-      className="hero__cta hero__cta--ghost"
-    >
-      <Ticket className="hero__cta-icon" />
-      Get Summit Pass
-    </a>
-  </div>
-);
 
 export default function Hero() {
   return (
@@ -35,7 +15,6 @@ export default function Hero() {
             className="hero__image"
           />
         </div>
-        <div className="hero__mobile-ctas">{CTA_BUTTONS}</div>
       </div>
 
       {/* Desktop / laptop: full-bleed cover background (unchanged look) */}
@@ -45,9 +24,6 @@ export default function Hero() {
           alt="Confluence 3.0 — The Largest Industry–Academia Summit"
           className="hero__image"
         />
-        {/* Soft scrim at the bottom so the CTAs stay readable */}
-        <div aria-hidden="true" className="hero__scrim" />
-        <div className="hero__content">{CTA_BUTTONS}</div>
       </div>
     </section>
   );
