@@ -60,7 +60,7 @@ export default function App() {
   }, [navigate]);
 
   return (
-    <div className="min-h-screen bg-white font-sans text-slate-900 antialiased">
+    <div className="min-h-screen bg-paper-50 font-sans text-slate-900 antialiased">
       <Navbar />
       <main>
         <Routes>

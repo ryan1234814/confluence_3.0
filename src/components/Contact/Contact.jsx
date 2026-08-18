@@ -1,35 +1,17 @@
 import { useState } from "react";
-import { CheckCircle2, Mail, MapPin, Phone, Send } from "lucide-react";
+import { CheckCircle2, Mail, Phone, Send } from "lucide-react";
 import "./Contact.css";
 
-const CONTACT_CARDS = [
-  {
-    icon: Mail,
-    label: "Email",
-    value: "confluence@rajagiritech.edu.in",
-    href: "mailto:confluence@rajagiritech.edu.in",
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "+91 484 2660999",
-    href: "tel:+914842660999",
-  },
-  {
-    icon: MapPin,
-    label: "Address",
-    value:
-      "Rajagiri School of Engineering & Technology, Rajagiri Valley, Kakkanad, Kochi 682 039, Kerala, India.",
-  },
-];
+const EMAIL_ADDRESS = "confluence@rajagiritech.edu.in";
+const PHONE_NUMBER = "+91 484 2660999";
 
 const SUBJECT_OPTIONS = [
-  "General Inquiry",
-  "Registration",
-  "Sponsorship",
-  "Speakers & Programme",
-  "Media & Press",
-  "Other",
+  "Registration & summit passes",
+  "Sponsorship & partnerships",
+  "Speakers & programme",
+  "Workshops & campus access",
+  "Media & press",
+  "Something else",
 ];
 
 const EMPTY_FORM = { name: "", email: "", subject: "", message: "" };
@@ -83,47 +65,51 @@ export default function Contact() {
     <>
       {/* Header banner */}
       <section id="contact" className="contact-hero">
-        {/* Subtle structured grid + soft gold wash over navy */}
+        {/* Subtle structured grid + soft gold wash over forest */}
         <div aria-hidden="true" className="contact-hero__grid" />
         <div aria-hidden="true" className="contact-hero__glow" />
 
         <div className="contact-hero__content">
-          <p className="contact-hero__eyebrow">Get in Touch</p>
           <h1 className="contact-hero__title">
-            Contact <span className="contact-hero__title-accent">Us</span>
+            Contact the <span className="contact-hero__title-accent">Confluence 3.0</span> team
           </h1>
           <p className="contact-hero__text">
-            Get in Touch with Us — Whether you have questions about the
-            conference, sponsorships, or registration, our team is ready to
-            help.
+            Questions about workshops, speakers, or campus access? Registration,
+            sponsorship, or press — the organising team is ready to help.
           </p>
         </div>
       </section>
 
-      {/* Direct contact cards */}
+      {/* Contact — email as the primary channel, phone & venue tucked in second */}
       <section className="contact-cards">
         <div className="contact-cards__container">
-          <div className="contact-cards__grid">
-            {CONTACT_CARDS.map((card) => (
-              <div key={card.label} className="contact-cards__card">
-                <span className="contact-cards__icon">
-                  <card.icon aria-hidden="true" />
-                </span>
-                <h2 className="contact-cards__label">{card.label}</h2>
-                {card.href ? (
-                  <a
-                    href={card.href}
-                    className="contact-cards__value"
-                  >
-                    {card.value}
-                  </a>
-                ) : (
-                  <p className="contact-cards__value--text">
-                    {card.value}
-                  </p>
-                )}
+          <div className="contact-cards__box">
+            <div className="contact-cards__item contact-cards__item--email">
+              <span className="contact-cards__icon">
+                <Mail aria-hidden="true" />
+              </span>
+              <div>
+                <h2 className="contact-cards__label">Email the team</h2>
+                <a
+                  href={`mailto:${EMAIL_ADDRESS}`}
+                  className="contact-cards__value contact-cards__value--large"
+                >
+                  {EMAIL_ADDRESS}
+                </a>
               </div>
-            ))}
+            </div>
+
+            <div className="contact-cards__item contact-cards__item--phone">
+              <span className="contact-cards__icon">
+                <Phone aria-hidden="true" />
+              </span>
+              <div>
+                <h2 className="contact-cards__label">Prefer to talk?</h2>
+                <a href="tel:+914842660999" className="contact-cards__value">
+                  {PHONE_NUMBER}
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -132,11 +118,12 @@ export default function Contact() {
       <section className="contact-form">
         <div className="contact-form__container">
           <div className="contact-form__header">
-            <p className="contact-form__eyebrow">Send an Inquiry</p>
-            <h2 className="contact-form__title">How can we help?</h2>
+            <h2 className="contact-form__title">
+              What do you need help with for Confluence 3.0?
+            </h2>
             <p className="contact-form__text">
-              Fill in the form below and our team will get back to you as soon
-              as possible.
+              Tell us what you're planning and the organising team will get
+              back to you.
             </p>
           </div>
 
@@ -231,7 +218,7 @@ export default function Contact() {
                 className={`${inputClasses} ${errors.subject ? "contact-form__input--error" : ""} ${form.subject ? "" : "contact-form__input--placeholder"}`}
               >
                 <option value="" disabled>
-                  Choose a subject…
+                  What's this about?
                 </option>
                 {SUBJECT_OPTIONS.map((option) => (
                   <option key={option} value={option}>
@@ -256,10 +243,10 @@ export default function Contact() {
               <textarea
                 id="contact-message"
                 name="message"
-                rows={5}
+                rows={4}
                 value={form.message}
                 onChange={handleChange}
-                placeholder="Tell us how we can help…"
+                placeholder="A sentence or two about what you need…"
                 aria-invalid={Boolean(errors.message)}
                 aria-describedby={errors.message ? "contact-message-error" : undefined}
                 className={`${inputClasses} contact-form__input--textarea ${errors.message ? "contact-form__input--error" : ""}`}
@@ -289,8 +276,8 @@ export default function Contact() {
             <p className="contact-location__eyebrow">Find Us</p>
             <h2 className="contact-location__title">Our Location</h2>
             <p className="contact-location__text">
-              Rajagiri School of Engineering &amp; Technology (RSET), Kakkanad,
-              Kochi.
+              Hosted at Rajagiri School of Engineering &amp; Technology,
+              Kakkanad, Kochi, on August 31, 2026 at 3:00 PM IST.
             </p>
           </div>
 

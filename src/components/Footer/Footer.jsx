@@ -4,7 +4,6 @@ import "./Footer.css";
 
 const QUICK_LINKS = [
   { label: "Home", href: "#home" },
-  { label: "Confluence Days", href: "#confluence-days" },
   { label: "Workshops", href: "#workshops" },
   { label: "Advisory Board", href: "#advisory-board" },
   { label: "Speakers", href: "#speakers" },
@@ -64,7 +63,7 @@ export default function Footer() {
               </li>
               <li className="footer__contact-item">
                 <Calendar className="footer__icon" aria-hidden="true" />
-                <span>September 1, 2026 · 10:00 AM IST</span>
+                <span>August 31, 2026 · 3:00 PM IST</span>
               </li>
             </ul>
           </div>

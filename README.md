@@ -2,8 +2,8 @@
 
 Official landing page for **Confluence 3.0**, the largest industry–academia
 summit hosted by the **Rajagiri School of Engineering and Technology
-(RSET)** — a Silver Jubilee edition opening on **September 1, 2026, at
-10:00 AM IST** at Rajagiri Valley, Kakkanad.
+(RSET)** — a Silver Jubilee edition opening on **August 31, 2026, at
+3:00 PM IST** at Rajagiri Valley, Kakkanad.
 
 ## Features
 
@@ -15,7 +15,7 @@ summit hosted by the **Rajagiri School of Engineering and Technology
   Advisory Board, Speakers, Sponsors, Media) that double as anchor targets for
   the navbar links.
 - **Live countdown** — a React `useEffect` + `setInterval` timer counting down
-  to the summit's opening moment (`1788237600000` ms = Sept 1, 2026, 10:00 AM
+  to the summit's opening moment (`1788168600000` ms = Aug 31, 2026, 3:00 PM
   GMT+0530), rendered as Days : Hours : Minutes : Seconds cards.
 - **Registration band** — CTA section anchoring "Register Now" /
   "Get Summit Pass".
@@ -119,7 +119,7 @@ Typography loads via Google Fonts in `index.html` (Inter + Space Grotesk).
 ## Customization
 
 - **Countdown target** — change `TARGET_TIMESTAMP_MS` in
-  `src/components/Countdown/Countdown.jsx` (currently `1788237600000`).
+  `src/components/Countdown/Countdown.jsx` (currently `1788168600000`).
 - **Nav links** — edit `NAV_LINKS` in `src/components/Navbar/Navbar.jsx`.
 - **Contact email / social links** — replace the placeholder
   `confluence@rajagiri.edu` and `href="#"` values in

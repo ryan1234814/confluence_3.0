@@ -1,5 +1,4 @@
 import {
-  CalendarDays,
   Handshake,
   Mic,
   Newspaper,
@@ -9,13 +8,6 @@ import {
 import "./Program.css";
 
 const PILLARS = [
-  {
-    id: "confluence-days",
-    icon: CalendarDays,
-    title: "Confluence Days",
-    description:
-      "Keynote addresses, expert panels, and paper presentations spanning engineering, management, social sciences, and applied sciences.",
-  },
   {
     id: "workshops",
     icon: Presentation,
@@ -69,10 +61,6 @@ export default function Program() {
             and the applied sciences.
           </p>
           <h2 className="program__title">Explore the Summit</h2>
-          <p className="program__subtitle">
-            Six pillars anchor Confluence 3.0 — a Silver Jubilee edition built
-            on dialogue, discovery, and collaboration.
-          </p>
         </div>
 
         {/* Crisp 1px-divided card grid */}

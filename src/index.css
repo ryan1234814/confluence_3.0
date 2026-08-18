@@ -71,6 +71,22 @@ body {
   text-rendering: optimizeLegibility;
 }
 
+/* Guard against accidental horizontal overflow from decorative elements
+   (e.g. gradient glows, pseudo-element accents) on any screen size. `clip`
+   does not create a scroll container, so the sticky navbar keeps working. */
+html,
+body {
+  overflow-x: clip;
+}
+
+/* Fixed body backgrounds are unreliable on touch devices (iOS ignores them,
+   Android repaints jankily) — fall back to normal scrolling there. */
+@media (max-width: 1023px) {
+  body {
+    background-attachment: scroll;
+  }
+}
+
 /* Typographic hierarchy */
 h1,
 h2,

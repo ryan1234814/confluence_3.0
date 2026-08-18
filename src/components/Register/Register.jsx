@@ -10,7 +10,7 @@ export default function Register() {
         <p className="register__text">
           Passes for Confluence 3.0 are now open to students, faculty,
           researchers, and industry professionals. Reserve your place before
-          September 1, 2026.
+          August 31, 2026.
         </p>
         <div className="register__actions">
           <a
@@ -21,7 +21,7 @@ export default function Register() {
             Get Summit Pass
           </a>
           <a
-            href="#confluence-days"
+            href="#program"
             className="register__btn register__btn--secondary"
           >
             View the Programme

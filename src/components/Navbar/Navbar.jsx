@@ -5,7 +5,6 @@ import "./Navbar.css";
 
 const NAV_LINKS = [
   { label: "Home", href: "#home" },
-  { label: "Confluence Days", href: "#confluence-days" },
   { label: "Workshops", href: "#workshops" },
   { label: "Advisory Board", href: "#advisory-board" },
   { label: "Speakers", href: "#speakers" },
