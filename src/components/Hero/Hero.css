@@ -4,6 +4,8 @@
 
 .hero__mobile {
   display: block;
+  position: relative;
+  overflow: hidden;
 }
 
 @media (min-width: 1024px) {
@@ -13,8 +15,8 @@
 }
 
 .hero__mobile-image {
-  position: relative;
-  height: 75vw;
+  position: absolute;
+  inset: 0;
   overflow: hidden;
 }
 
@@ -29,11 +31,7 @@
   pointer-events: none;
 }
 
-@media (min-width: 640px) {
-  .hero__mobile-image {
-    height: min(56.25vw, 85vh);
-  }
-}
+
 
 .hero__image {
   position: absolute;
@@ -48,12 +46,23 @@
 }
 
 .hero__mobile-ctas {
+  position: relative;
+  z-index: 2;
+  padding: 70vw 1rem 2rem;
   background:
-    radial-gradient(ellipse 150% 100% at 50% 0%, rgba(124, 58, 237, 0.25), transparent 60%),
-    linear-gradient(180deg, #070b14 0%, #0a1530 60%, #1e1b4b 100%);
-  padding: 1.75rem 1rem;
-  border-top: 3px solid transparent;
-  border-image: linear-gradient(90deg, #0ea5e9, #7c3aed, #e11d48, #f59e0b) 1;
+    linear-gradient(
+      to top,
+      rgba(7, 11, 20, 0.88) 0%,
+      rgba(10, 21, 48, 0.65) 35%,
+      rgba(124, 58, 237, 0.12) 60%,
+      transparent 100%
+    );
+}
+
+@media (min-width: 640px) {
+  .hero__mobile-ctas {
+    padding-top: min(50vw, 75vh);
+  }
 }
 
 .hero__desktop {
