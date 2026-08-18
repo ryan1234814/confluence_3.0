@@ -1,82 +1,34 @@
 .hero {
   scroll-margin-top: 5rem;
-}
-
-.hero__mobile {
-  display: block;
+  background-color: #070b14;
   position: relative;
   overflow: hidden;
-  /* 16:9-ish ratio ensures the central text block stays visible */
-  aspect-ratio: 16 / 9;
-  min-height: 50vh;
+  width: 100%;
 }
 
-@media (min-width: 1024px) {
-  .hero__mobile {
-    display: none;
-  }
-}
-
-.hero__mobile-image {
-  position: absolute;
-  inset: 0;
+.hero__banner-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
   overflow: hidden;
+  aspect-ratio: 1454 / 720;
 }
-
-.hero__mobile-image::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(14, 165, 233, 0.22), transparent 70%),
-    linear-gradient(180deg, rgba(124, 58, 237, 0.12) 0%, transparent 40%),
-    linear-gradient(0deg, rgba(0, 0, 0, 0.55) 0%, transparent 55%);
-  pointer-events: none;
-}
-
-
 
 .hero__image {
-  position: absolute;
-  inset: 0;
   width: 100%;
   height: 100%;
-  min-width: 100%;
-  min-height: 100%;
   object-fit: cover;
-  object-position: center 42%;
+  object-position: center;
   display: block;
 }
 
-
-
-.hero__desktop {
-  display: none;
-  position: relative;
-  overflow: hidden;
-  min-height: min(75vh, 80vw);
-}
-
-@media (min-width: 1024px) {
-  .hero__desktop {
-    display: block;
-  }
-}
-
-.hero__desktop::after {
-  content: "";
+.hero__glow {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 900px 500px at 15% 10%, rgba(14, 165, 233, 0.3), transparent 60%),
-    radial-gradient(ellipse 800px 500px at 85% 15%, rgba(225, 29, 72, 0.22), transparent 60%),
-    radial-gradient(ellipse 700px 400px at 50% 0%, rgba(124, 58, 237, 0.25), transparent 60%);
+    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(14, 165, 233, 0.15), transparent 70%),
+    linear-gradient(180deg, rgba(124, 58, 237, 0.08) 0%, transparent 40%),
+    linear-gradient(0deg, rgba(7, 11, 20, 0.4) 0%, transparent 50%);
   pointer-events: none;
-  mix-blend-mode: screen;
 }
-
-
-
-
-
-
