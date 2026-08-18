@@ -12,23 +12,25 @@
   max-width: 100%;
   margin: 0 auto;
   overflow: hidden;
-  aspect-ratio: 1454 / 720;
+  /* Increased depth: ~85% of full height (1454 / 615) for a deeper, more cinematic view */
+  aspect-ratio: 1454 / 615;
 }
 
 .hero__image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center;
+  object-position: top center;
   display: block;
+  filter: contrast(1.04) brightness(1.02);
 }
 
 .hero__glow {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 50% at 50% 0%, rgba(14, 165, 233, 0.15), transparent 70%),
-    linear-gradient(180deg, rgba(124, 58, 237, 0.08) 0%, transparent 40%),
-    linear-gradient(0deg, rgba(7, 11, 20, 0.4) 0%, transparent 50%);
+    radial-gradient(ellipse 70% 45% at 50% 0%, rgba(14, 165, 233, 0.18), transparent 70%),
+    radial-gradient(ellipse 85% 60% at 50% 100%, rgba(7, 11, 20, 0.65) 0%, transparent 70%),
+    linear-gradient(180deg, rgba(124, 58, 237, 0.08) 0%, transparent 35%, rgba(7, 11, 20, 0.5) 100%);
   pointer-events: none;
 }
