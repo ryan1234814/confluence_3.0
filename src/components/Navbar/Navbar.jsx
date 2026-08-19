@@ -10,6 +10,7 @@ const NAV_LINKS = [
   { label: "Speakers", path: "/speakers" },
   { label: "Sponsors", href: "#sponsors" },
   { label: "Media", href: "#media" },
+  { label: "Tickets", path: "/tickets" },
   { label: "Contact", path: "/contact" },
 ];
 

@@ -1,47 +1,22 @@
-import {
-  Handshake,
-  Mic,
-  Newspaper,
-  Presentation,
-  Users,
-} from "lucide-react";
+import { Calendar, Clock } from "lucide-react";
 import "./Program.css";
 
-const PILLARS = [
+const EVENTS = [
   {
-    id: "workshops",
-    icon: Presentation,
-    title: "Workshops",
-    description:
-      "Hands-on, skill-focused sessions led by industry practitioners and leading academics from RSET.",
+    id: "day1",
+    day: "Day 1",
+    title: "Confluence 3.0 Inauguration and Silver Jubilee Culmination",
+    date: "31st August 2026",
+    time: "4.00pm to 6.00pm",
+    image: `${import.meta.env.BASE_URL}home_boxes/box1.jpeg`,
   },
   {
-    id: "advisory-board",
-    icon: Users,
-    title: "Advisory Board",
-    description:
-      "A distinguished council of academic and industry leaders guiding the direction and quality of the summit programme.",
-  },
-  {
-    id: "speakers",
-    icon: Mic,
-    title: "Speakers",
-    description:
-      "Visionary voices from industry and academia sharing perspectives on the future of work, learning, and innovation.",
-  },
-  {
-    id: "sponsors",
-    icon: Handshake,
-    title: "Sponsors",
-    description:
-      "Partner with the largest industry–academia summit and connect with tomorrow's talent and today's decision-makers.",
-  },
-  {
-    id: "media",
-    icon: Newspaper,
-    title: "Media",
-    description:
-      "Press coverage, interviews, and stories capturing the conversations shaping the Silver Jubilee edition.",
+    id: "day2",
+    day: "Day 2",
+    title: "Confluence 3.0 — Industry Academia Summit 2026",
+    date: "1st September 2026",
+    time: "9.30am to 4.30pm",
+    image: `${import.meta.env.BASE_URL}home_boxes/box2.jpeg`,
   },
 ];
 
@@ -63,15 +38,24 @@ export default function Program() {
           <h2 className="program__title">Explore the Summit</h2>
         </div>
 
-        {/* Crisp 1px-divided card grid */}
-        <div className="program__grid">
-          {PILLARS.map(({ id, icon: Icon, title, description }) => (
-            <div key={id} id={id} className="program__card">
-              <div className="program__card-icon">
-                <Icon strokeWidth={1.75} />
+        <div className="program__events">
+          {EVENTS.map(({ id, day, title, date, time, image }) => (
+            <div key={id} className="program__event-card" style={{ backgroundImage: `url(${image})` }}>
+              <div className="program__event-overlay"></div>
+              <div className="program__event-content">
+                <div className="program__event-day">{day}</div>
+                <h3 className="program__event-title">{title}</h3>
+                <div className="program__event-details">
+                  <span className="program__event-detail">
+                    <Calendar size={18} />
+                    {date}
+                  </span>
+                  <span className="program__event-detail">
+                    <Clock size={18} />
+                    {time}
+                  </span>
+                </div>
               </div>
-              <h3 className="program__card-title">{title}</h3>
-              <p className="program__card-text">{description}</p>
             </div>
           ))}
         </div>

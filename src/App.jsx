@@ -8,6 +8,7 @@ import Register from "./components/Register/Register.jsx";
 import Contact from "./components/Contact/Contact.jsx";
 import AdvisoryBoard from "./components/AdvisoryBoard/AdvisoryBoard.jsx";
 import Speakers from "./components/Speakers/Speakers.jsx";
+import Tickets from "./components/Tickets/Tickets.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 
 function Home() {
@@ -70,6 +71,7 @@ export default function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/advisory-board" element={<AdvisoryBoard />} />
           <Route path="/speakers" element={<Speakers />} />
+          <Route path="/tickets" element={<Tickets />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </main>
