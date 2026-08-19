@@ -3,10 +3,10 @@ import { CalendarDays, Clock } from "lucide-react";
 import "./Countdown.css";
 
 /**
- * August 31, 2026, 3:00:00 PM IST (GMT+0530),
+ * August 31, 2026, 4:00:00 PM IST (GMT+0530),
  * expressed as milliseconds since the Unix epoch.
  */
-const TARGET_TIMESTAMP_MS = 1788168600000;
+const TARGET_TIMESTAMP_MS = 1788172200000;
 
 function getTimeLeft(nowMs) {
   const remainingMs = Math.max(TARGET_TIMESTAMP_MS - nowMs, 0);
@@ -49,7 +49,7 @@ export default function Countdown() {
       <div className="countdown__container">
         <h2 className="countdown__title">Confluence Countdown Begins</h2>
         <p className="countdown__subtitle">
-          Confluence 3.0 opens on August 31, 2026 at 3:00 PM IST at Rajagiri
+          Confluence 3.0 opens on August 31, 2026 at 4:00 PM IST at Rajagiri
           Valley, Kakkanad.
         </p>
 
@@ -84,7 +84,7 @@ export default function Countdown() {
           </span>
           <span className="countdown__meta-item">
             <Clock className="countdown__meta-icon" />
-            3:00 PM IST
+            4:00 PM IST
           </span>
         </div>
       </div>
