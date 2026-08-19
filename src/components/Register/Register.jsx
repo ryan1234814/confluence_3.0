@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { ArrowRight, Ticket } from "lucide-react";
 import "./Register.css";
 
@@ -13,13 +14,13 @@ export default function Register() {
           August 31, 2026.
         </p>
         <div className="register__actions">
-          <button
-            type="button"
+          <Link
+            to="/tickets"
             className="register__btn register__btn--primary"
           >
             <Ticket className="register__btn-icon" />
             Get Summit Pass
-          </button>
+          </Link>
           <a
             href="#program"
             className="register__btn register__btn--secondary"
