@@ -1,3 +1,5 @@
+import { useState, useCallback } from "react";
+import { CheckCircle } from "lucide-react";
 import "./Tickets.css";
 
 const TICKETS = [
@@ -5,20 +7,53 @@ const TICKETS = [
     id: "business",
     image: `${import.meta.env.BASE_URL}Tickets/4.png`,
     alt: "Business Leader's Badge — ₹400 / ₹300 Early Bird",
+    title: "Business Leader's Badge",
+    forText: "Exclusively for Industry Delegates",
+    color: "#92692b",
+    features: [
+      "Priority access to main venue",
+      "Access to 1 Workshop (subject to availability)",
+      "Welcome Kit",
+      "Lunch Included",
+    ],
   },
   {
     id: "academic",
     image: `${import.meta.env.BASE_URL}Tickets/5.png`,
     alt: "Academic Leader's Badge — ₹300 / ₹200 Early Bird",
+    title: "Academic Leader's Badge",
+    forText: "Exclusively for Faculty Delegates",
+    color: "#0e3c6e",
+    features: [
+      "Priority access to main venue",
+      "Access to 1 Workshop (subject to availability)",
+      "Welcome Kit",
+      "Lunch Included",
+    ],
   },
   {
     id: "young",
     image: `${import.meta.env.BASE_URL}Tickets/6.png`,
     alt: "Young Leader's Badge — ₹200 / ₹100 Early Bird",
+    title: "Young Leader's Badge",
+    forText: "Exclusively for Student Delegates",
+    color: "#8a7e6e",
+    features: [
+      "Priority access to main venue",
+      "Access to 1 Workshop (subject to availability)",
+      "Welcome Kit",
+      "Lunch Included",
+    ],
   },
 ];
 
 export default function Tickets() {
+  const [flippedId, setFlippedId] = useState(null);
+
+  const handleTouch = useCallback((id) => {
+    setFlippedId((prev) => (prev === id ? null : id));
+  }, []);
+
   return (
     <section id="tickets" className="tickets">
       <div className="tickets__container">
@@ -32,9 +67,37 @@ export default function Tickets() {
         </div>
 
         <div className="tickets__grid">
-          {TICKETS.map(({ id, image, alt }) => (
-            <div key={id} className="tickets__card">
-              <img src={image} alt={alt} className="tickets__image" />
+          {TICKETS.map(({ id, image, alt, title, forText, color, features }) => (
+            <div key={id} className="tickets__flip-wrapper" onClick={() => handleTouch(id)}>
+              <div className={`tickets__flip-card${flippedId === id ? " is-flipped" : ""}`}>
+                {/* Front — badge image */}
+                <div className="tickets__flip-front">
+                  <img src={image} alt={alt} className="tickets__image" />
+                </div>
+
+                {/* Back — details */}
+                <div
+                  className="tickets__flip-back"
+                  style={{ background: color }}
+                >
+                  <p className="tickets__back-label">CONFLUENCE 3.0</p>
+                  <h3 className="tickets__back-title">{title}</h3>
+                  <p className="tickets__back-for">{forText}</p>
+
+                  <ul className="tickets__features">
+                    {features.map((feat) => (
+                      <li key={feat} className="tickets__feature">
+                        <CheckCircle className="tickets__feature-icon" />
+                        <span>{feat}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <button type="button" className="tickets__buy-btn">
+                    Buy Now →
+                  </button>
+                </div>
+              </div>
             </div>
           ))}
         </div>

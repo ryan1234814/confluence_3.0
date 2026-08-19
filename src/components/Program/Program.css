@@ -152,7 +152,7 @@
   font-size: 1.5rem;
   font-weight: 700;
   color: #ffffff;
-  font-family: "Playfair Display", Georgia, serif;
+  font-family: "Inter", system-ui, sans-serif;
   letter-spacing: 0.03em;
 }
 
@@ -170,7 +170,7 @@
 
 .program__event-day {
   display: inline-block;
-  font-family: "Playfair Display", "Lora", Georgia, serif;
+  font-family: "Inter", system-ui, sans-serif;
   font-size: 0.875rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -183,7 +183,7 @@
 }
 
 .program__event-title {
-  font-family: "Playfair Display", "Lora", Georgia, serif;
+  font-family: "Inter", system-ui, sans-serif;
   font-size: 1.75rem;
   font-weight: 700;
   color: #f1f5f9;
