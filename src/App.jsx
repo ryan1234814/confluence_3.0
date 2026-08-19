@@ -6,6 +6,8 @@ import Program from "./components/Program/Program.jsx";
 import Countdown from "./components/Countdown/Countdown.jsx";
 import Register from "./components/Register/Register.jsx";
 import Contact from "./components/Contact/Contact.jsx";
+import AdvisoryBoard from "./components/AdvisoryBoard/AdvisoryBoard.jsx";
+import Speakers from "./components/Speakers/Speakers.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 
 function Home() {
@@ -66,6 +68,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/advisory-board" element={<AdvisoryBoard />} />
+          <Route path="/speakers" element={<Speakers />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </main>

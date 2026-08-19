@@ -80,15 +80,15 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* Contact — email as the primary channel, phone & venue tucked in second */}
+      {/* Contact — email & phone side-by-side cards */}
       <section className="contact-cards">
         <div className="contact-cards__container">
-          <div className="contact-cards__box">
+          <div className="contact-cards__grid">
             <div className="contact-cards__item contact-cards__item--email">
               <span className="contact-cards__icon">
                 <Mail aria-hidden="true" />
               </span>
-              <div>
+              <div className="contact-cards__info">
                 <h2 className="contact-cards__label">Email the team</h2>
                 <a
                   href={`mailto:${EMAIL_ADDRESS}`}
@@ -103,7 +103,7 @@ export default function Contact() {
               <span className="contact-cards__icon">
                 <Phone aria-hidden="true" />
               </span>
-              <div>
+              <div className="contact-cards__info">
                 <h2 className="contact-cards__label">Prefer to talk?</h2>
                 <a href="tel:+914842660999" className="contact-cards__value">
                   {PHONE_NUMBER}

@@ -13,13 +13,13 @@ export default function Register() {
           August 31, 2026.
         </p>
         <div className="register__actions">
-          <a
-            href="mailto:confluence@rajagiri.edu"
+          <button
+            type="button"
             className="register__btn register__btn--primary"
           >
             <Ticket className="register__btn-icon" />
             Get Summit Pass
-          </a>
+          </button>
           <a
             href="#program"
             className="register__btn register__btn--secondary"

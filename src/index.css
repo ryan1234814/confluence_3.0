@@ -2,10 +2,10 @@
 
 /*
  * Confluence 3.0 — Silver Jubilee Design System
- * Editorial, warm, paper-like feel anchored in forest + teal accents.
+ * Professional, dark, bold academic summit aesthetic.
  */
 @theme {
-  /* Warm neutral paper palette */
+  /* Warm neutral paper palette — background preserved */
   --color-paper-50: #fbf7f1;
   --color-paper-100: #f5efe4;
   --color-paper-200: #ece3d0;
@@ -17,21 +17,24 @@
   --color-ink-500: #6a7f76;
   --color-ink-400: #8ea098;
 
-  /* Forest / teal accent system */
-  --color-forest-900: #0f3428;
-  --color-forest-800: #14532d;
-  --color-forest-700: #166534;
-  --color-forest-600: #15803d;
-  --color-forest-500: #1d7a5b;
+  /* Dark professional accent system */
+  --color-navy-950: #070d1a;
+  --color-navy-900: #0c1629;
+  --color-navy-800: #111d35;
+  --color-navy-700: #162746;
+  --color-navy-600: #1e3a5f;
+  --color-slate-800: #1e293b;
+  --color-slate-700: #334155;
+  --color-slate-600: #475569;
+  --color-teal-800: #115e59;
   --color-teal-700: #0f766e;
   --color-teal-600: #0d9488;
-  --color-teal-500: #14b8a6;
 
-  /* Warm accent (crimson brick / burnt sienna) */
-  --color-terracotta: #b4533b;
-  --color-russet: #8a4a2b;
-  --color-gold-dark: #a16207;
-  --color-gold: #ca8a04;
+  /* Warm accent — restrained crimson / gold */
+  --color-crimson: #991b1b;
+  --color-crimson-dark: #7f1d1d;
+  --color-gold-dark: #92400e;
+  --color-gold: #a16207;
 
   /* Font pairing — editorial serif + clean sans */
   --font-display: "Cormorant Garamond", "Instrument Serif", Georgia,
@@ -133,7 +136,7 @@ p {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.22em;
-  color: var(--color-forest-600);
+  color: var(--color-teal-700);
 }
 
 /* Decorative rule */
