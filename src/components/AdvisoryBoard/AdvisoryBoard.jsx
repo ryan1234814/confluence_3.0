@@ -1,4 +1,23 @@
-import { ExternalLink } from "lucide-react";
+function LinkedinIcon(props) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+      <rect width="4" height="12" x="2" y="9" />
+      <circle cx="4" cy="4" r="2" />
+    </svg>
+  );
+}
 import COMMITTEE from "./advisoryBoardData.js";
 import "./AdvisoryBoard.css";
 
@@ -13,6 +32,24 @@ function initials(name) {
     .join("")
     .slice(0, 2)
     .toUpperCase();
+}
+
+/* ------------------------------------------------------------------ */
+/*  Shared LinkedIn link                                               */
+/* ------------------------------------------------------------------ */
+function LinkedInLink({ member }) {
+  if (!member.linkedinUrl) return null;
+  return (
+    <a
+      href={member.linkedinUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="ab-card__linkedin"
+      aria-label={`LinkedIn profile of ${member.name}`}
+    >
+      <LinkedinIcon aria-hidden="true" />
+    </a>
+  );
 }
 
 /* ------------------------------------------------------------------ */
@@ -39,17 +76,7 @@ function PersonCardSpotlight({ member }) {
         {member.organization && (
           <p className="ab-card__org">{member.organization}</p>
         )}
-        {member.linkedinUrl && (
-          <a
-            href={member.linkedinUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ab-card__linkedin"
-            aria-label={`LinkedIn profile of ${member.name}`}
-          >
-            <ExternalLink aria-hidden="true" />
-          </a>
-        )}
+        <LinkedInLink member={member} />
       </div>
     </article>
   );
@@ -75,17 +102,7 @@ function PersonCardPremium({ member }) {
         {member.organization && (
           <p className="ab-card__org">{member.organization}</p>
         )}
-        {member.linkedinUrl && (
-          <a
-            href={member.linkedinUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ab-card__linkedin"
-            aria-label={`LinkedIn profile of ${member.name}`}
-          >
-            <ExternalLink aria-hidden="true" />
-          </a>
-        )}
+        <LinkedInLink member={member} />
       </div>
     </article>
   );
@@ -111,17 +128,7 @@ function PersonCardStandard({ member }) {
         {member.organization && (
           <p className="ab-card__org">{member.organization}</p>
         )}
-        {member.linkedinUrl && (
-          <a
-            href={member.linkedinUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ab-card__linkedin"
-            aria-label={`LinkedIn profile of ${member.name}`}
-          >
-            <ExternalLink aria-hidden="true" />
-          </a>
-        )}
+        <LinkedInLink member={member} />
       </div>
     </article>
   );
@@ -147,6 +154,7 @@ function PersonCardCompact({ member }) {
         {member.organization && (
           <p className="ab-card__org">{member.organization}</p>
         )}
+        <LinkedInLink member={member} />
       </div>
     </article>
   );
