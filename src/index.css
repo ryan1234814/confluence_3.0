@@ -37,22 +37,17 @@
   --color-gold: #a16207;
 
   /* Font pairing — editorial serif + clean sans */
-  --font-display: "Cormorant Garamond", "Instrument Serif", Georgia,
-    "Times New Roman", serif;
-  --font-serif: "Instrument Serif", "Cormorant Garamond", Georgia,
-    "Times New Roman", serif;
-  --font-sans: "Source Sans 3", "Inter", ui-sans-serif, system-ui,
-    -apple-system, Roboto, Arial, sans-serif;
-  --font-ui: "Inter", "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+  --font-display: ui-sans-serif, system-ui, -apple-system, Roboto, Arial, sans-serif;
+  --font-serif: ui-sans-serif, system-ui, -apple-system, Roboto, Arial, sans-serif;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, Roboto, Arial, sans-serif;
+  --font-ui: ui-sans-serif, system-ui, -apple-system, Roboto, Arial, sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: "Source Sans 3", "Inter", ui-sans-serif, system-ui, -apple-system,
-    Roboto, Arial, sans-serif;
+body {  font-family: ui-sans-serif, system-ui, -apple-system, Roboto, Arial, sans-serif;
   font-size: 1.0625rem;
   line-height: 1.7;
   color: var(--color-ink-800);
@@ -97,10 +92,9 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Cormorant Garamond", "Instrument Serif", Georgia,
-    "Times New Roman", serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, Roboto, Arial, sans-serif;
   color: var(--color-ink-900);
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: -0.01em;
   line-height: 1.15;
 }
@@ -131,7 +125,7 @@ p {
 
 /* Utility: forest ink drop cap feel */
 .eyebrow {
-  font-family: "Source Sans 3", "Inter", sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, Roboto, Arial, sans-serif;
   font-size: 0.75rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -152,7 +146,7 @@ p {
 
 /* Editorially balanced text utility */
 .serif-body {
-  font-family: "Instrument Serif", "Cormorant Garamond", Georgia, serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, Roboto, Arial, sans-serif;
   font-style: italic;
   color: var(--color-ink-700);
 }
