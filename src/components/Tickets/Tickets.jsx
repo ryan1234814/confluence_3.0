@@ -1,5 +1,5 @@
 import { useState, useCallback } from "react";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, XCircle } from "lucide-react";
 import "./Tickets.css";
 
 const TICKETS = [
@@ -11,10 +11,10 @@ const TICKETS = [
     forText: "Exclusively for Industry Delegates",
     color: "#92692b",
     features: [
-      "Priority access to main venue",
-      "Access to 1 Workshop (subject to availability)",
-      "Welcome Kit",
-      "Lunch Included",
+      { text: "Priority access to main venue", included: true },
+      { text: "Access to 1 Workshop (subject to availability)", included: true },
+      { text: "Welcome Kit", included: true },
+      { text: "Lunch Included", included: true },
     ],
   },
   {
@@ -25,10 +25,10 @@ const TICKETS = [
     forText: "Exclusively for Faculty Delegates",
     color: "#0e3c6e",
     features: [
-      "Priority access to main venue",
-      "Access to 1 Workshop (subject to availability)",
-      "Welcome Kit",
-      "Lunch Included",
+      { text: "Priority access to main venue", included: true },
+      { text: "Access to 1 Workshop (subject to availability)", included: true },
+      { text: "Welcome Kit", included: true },
+      { text: "Lunch Included", included: true },
     ],
   },
   {
@@ -39,10 +39,10 @@ const TICKETS = [
     forText: "Exclusively for Student Delegates",
     color: "#8a7e6e",
     features: [
-      "Priority access to main venue",
-      "Access to 1 Workshop (subject to availability)",
-      "Welcome Kit",
-      "Lunch Included",
+      { text: "Priority access to main venue", included: true },
+      { text: "Access to 1 Workshop (subject to availability)", included: true },
+      { text: "Welcome Kit", included: true },
+      { text: "Lunch not Included", included: false },
     ],
   },
 ];
@@ -85,10 +85,16 @@ export default function Tickets() {
                   <p className="tickets__back-for">{forText}</p>
 
                   <ul className="tickets__features">
-                    {features.map((feat) => (
-                      <li key={feat} className="tickets__feature">
-                        <CheckCircle className="tickets__feature-icon" />
-                        <span>{feat}</span>
+                    {features.map(({ text, included }) => (
+                      <li key={text} className="tickets__feature">
+                        {included ? (
+                          <CheckCircle className="tickets__feature-icon tickets__feature-icon--included" />
+                        ) : (
+                          <XCircle className="tickets__feature-icon tickets__feature-icon--excluded" />
+                        )}
+                        <span className={!included ? "tickets__feature-text--excluded" : ""}>
+                          {text}
+                        </span>
                       </li>
                     ))}
                   </ul>
