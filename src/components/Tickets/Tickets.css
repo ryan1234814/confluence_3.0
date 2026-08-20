@@ -33,7 +33,7 @@
 }
 
 .tickets__eyebrow {
-  font-family: "Playfair Display", "Lora", Georgia, serif;
+  font-family: "Inter", system-ui, sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -49,7 +49,7 @@
 
 .tickets__title {
   margin-top: 1rem;
-  font-family: "Playfair Display", "Lora", Georgia, serif;
+  font-family: "Inter", system-ui, sans-serif;
   font-size: 2.75rem;
   font-weight: 800;
   letter-spacing: -0.015em;
@@ -68,7 +68,7 @@
   font-size: 1.25rem;
   line-height: 1.75;
   color: #475569;
-  font-family: "Lora", Georgia, serif;
+  font-family: "Inter", system-ui, sans-serif;
 }
 
 /* ── Grid layout ── */
@@ -246,6 +246,7 @@
   border: none;
   border-radius: 9999px;
   cursor: pointer;
+  text-decoration: none;
   transition: background 200ms ease, transform 200ms ease;
   letter-spacing: 0.02em;
 }

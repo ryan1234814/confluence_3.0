@@ -13,7 +13,6 @@ const TICKETS = [
     features: [
       { text: "Priority access to main venue", included: true },
       { text: "Access to 1 Workshop (subject to availability)", included: true },
-      { text: "Welcome Kit", included: true },
       { text: "Lunch Included", included: true },
     ],
   },
@@ -27,7 +26,6 @@ const TICKETS = [
     features: [
       { text: "Priority access to main venue", included: true },
       { text: "Access to 1 Workshop (subject to availability)", included: true },
-      { text: "Welcome Kit", included: true },
       { text: "Lunch Included", included: true },
     ],
   },
@@ -41,7 +39,6 @@ const TICKETS = [
     features: [
       { text: "Priority access to main venue", included: true },
       { text: "Access to 1 Workshop (subject to availability)", included: true },
-      { text: "Welcome Kit", included: true },
       { text: "Lunch not Included", included: false },
     ],
   },
@@ -99,9 +96,15 @@ export default function Tickets() {
                     ))}
                   </ul>
 
-                  <button type="button" className="tickets__buy-btn">
+                  <a
+                    href="https://konfhub.com/confluence-30"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="tickets__buy-btn"
+                    onClick={(e) => e.stopPropagation()}
+                  >
                     Buy Now →
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
