@@ -44,8 +44,14 @@ const COMMITTEE = [
     variant: "standard",
     members: [
       {
+        name: "Rev. Dr. Jaison Paul Mulerikkal CMI",
+        designation: "Principal, RSET",
+        imageUrl: "https://media.licdn.com/dms/image/v2/C4E03AQH8_NMpYnN_FQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516324377983?e=1788998400&v=beta&t=Y17MiEX5aAiXJIKmSptuZN4OsZ0B9jRzj1YiVLE8gr8",
+        linkedinUrl: "https://www.linkedin.com/in/jaisonmpaul/",
+      },
+      {
         name: "Mr. V K Mathews",
-        designation: "Executive Chairman, IBS Software, Kochi & Chairman, GTech",
+        designation: "Executive Chairman, IBS Software, Kochi",
         imageUrl: "https://mma.prnewswire.com/media/1910791/VK_Mathews.jpg?p=publish",
         linkedinUrl: "https://www.linkedin.com/in/v-k-mathews-08b0a2187/",
       },
