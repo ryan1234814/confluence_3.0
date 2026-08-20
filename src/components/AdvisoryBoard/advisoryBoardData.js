@@ -12,9 +12,9 @@ const COMMITTEE = [
     variant: "spotlight",
     members: [
       {
-        name: "Rev. Dr. Thomas Thanthayil CMI",
-        designation: "Provincial, CMI Eastern Province & President, Rajagiri Institutions",
-        organization: "Rajagiri Institutions",
+        name: "Rev. Fr. Poulose Kidangen CMI",
+        designation: "Provincial of the CMI Sacred Heart Province and Manager of Rajagiri School of Engineering & Technology (RSET), Kochi",
+        organization: "RSET, Kochi",
         imageUrl: "",
       },
     ],
