@@ -15,13 +15,30 @@
   aspect-ratio: 1828 / 1024;
 }
 
-.hero__image {
+.hero__video {
+  position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
   display: block;
-  filter: contrast(1.04) brightness(1.02);
+}
+
+.hero__logo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  mix-blend-mode: multiply;
+  filter:
+    invert(1)
+    contrast(20)
+    brightness(0.8)
+    contrast(20);
 }
 
 .hero__glow {

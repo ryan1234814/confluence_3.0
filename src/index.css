@@ -47,22 +47,19 @@ html {
   scroll-behavior: smooth;
 }
 
-body {  font-family: ui-sans-serif, system-ui, -apple-system, Roboto, Arial, sans-serif;
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, Roboto, Arial, sans-serif;
   font-size: 1.0625rem;
   line-height: 1.7;
   color: var(--color-ink-800);
   background-color: var(--color-paper-50);
   background-image:
-    radial-gradient(
-      1200px 600px at 10% -10%,
+    radial-gradient(1200px 600px at 10% -10%,
       rgba(214, 189, 137, 0.18),
-      transparent 60%
-    ),
-    radial-gradient(
-      900px 500px at 100% 10%,
+      transparent 60%),
+    radial-gradient(900px 500px at 100% 10%,
       rgba(29, 122, 91, 0.08),
-      transparent 60%
-    ),
+      transparent 60%),
     linear-gradient(180deg, #fbf7f1 0%, #f6efe1 100%);
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
@@ -136,12 +133,10 @@ p {
 /* Decorative rule */
 .hairline {
   height: 1px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--color-paper-300),
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      var(--color-paper-300),
+      transparent);
 }
 
 /* Editorially balanced text utility */

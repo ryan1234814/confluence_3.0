@@ -7,6 +7,7 @@ const NAV_LINKS = [
   { label: "Home", href: "#home" },
   { label: "Workshops", href: "#workshops" },
   { label: "Advisory Board", path: "/advisory-board" },
+  { label: "Speakers", path: "/speakers" },
   { label: "Sponsors", href: "#sponsors" },
   { label: "Media", href: "#media" },
   { label: "Tickets", path: "/tickets" },

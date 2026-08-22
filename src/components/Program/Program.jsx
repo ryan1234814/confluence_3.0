@@ -27,13 +27,12 @@ export default function Program() {
         <div className="program__header">
           <p className="program__eyebrow">Programme Overview</p>
           <p className="program__intro">
-            The largest industry–academia summit hosted by the Rajagiri School
-            of Engineering and Technology (Autonomous), celebrating its Silver
-            Jubilee. Marking 25 years of academic excellence, this summit
-            brings together industry leaders, distinguished academics, and
-            budding innovators under one roof — to exchange ideas, forge
-            collaborations, and shape the future of engineering, management,
-            and the applied sciences.
+            Confluence 3.0 is the third edition of the largest industry-academia
+            summit, organized by Rajagiri School of Engineering & Technology.            In its Silver Jubilee Year, RSET aims to bring together industry
+            leaders, distinguished academics, and budding innovators under one
+            roof — to exchange ideas, forge collaborations, and shape the future
+            of engineering, management, and the applied sciences through this
+            summit.
           </p>
           <h2 className="program__title">Explore the Summit</h2>
         </div>

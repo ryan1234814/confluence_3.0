@@ -55,12 +55,20 @@ export default function Tickets() {
     <section id="tickets" className="tickets">
       <div className="tickets__container">
         <div className="tickets__header">
-          <p className="tickets__eyebrow">Registration Passes</p>
-          <h1 className="tickets__title">Confluence 3.0 Tickets</h1>
-          <p className="tickets__subtitle">
-            Choose the badge that suits your role and secure your seat at the
-            largest industry–academia summit.
-          </p>
+          <img
+            src={`${import.meta.env.BASE_URL}head/register.webp`}
+            alt=""
+            className="tickets__header-bg"
+          />
+          <div className="tickets__header-overlay" />
+          <div className="tickets__header-content">
+            <p className="tickets__eyebrow">Registration Passes</p>
+            <h1 className="tickets__title">Confluence 3.0 Tickets</h1>
+            <p className="tickets__subtitle">
+              Choose the badge that suits your role and secure your seat at the
+              largest industry–academia summit.
+            </p>
+          </div>
         </div>
 
         <div className="tickets__grid">
@@ -110,6 +118,8 @@ export default function Tickets() {
             </div>
           ))}
         </div>
+
+
       </div>
     </section>
   );

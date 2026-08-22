@@ -179,7 +179,9 @@
 
 @media (min-width: 1024px) {
   .ab-section__grid--premium {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 56rem;
+    margin-inline: auto;
   }
 }
 
