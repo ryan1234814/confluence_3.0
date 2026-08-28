@@ -15,12 +15,12 @@
 
 .tickets__header {
   margin-inline: auto;
-  max-width: 52rem;
+  max-width: 80rem;
   text-align: center;
   position: relative;
-  border-radius: 1.25rem;
   overflow: hidden;
   margin-bottom: 4rem;
+  background: #0c1629;
 }
 
 .tickets__header-bg {
@@ -29,6 +29,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   z-index: 0;
 }
 
@@ -42,7 +43,7 @@
 .tickets__header-content {
   position: relative;
   z-index: 2;
-  padding: 3.5rem 2rem;
+  padding: 5rem 2rem;
 }
 
 .tickets__eyebrow {

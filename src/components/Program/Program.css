@@ -62,7 +62,7 @@
 .program__intro {
   margin: 1.5rem auto 0;
   max-width: 56rem;
-  text-align: left;
+  text-align: justify;
   font-size: 1.25rem;
   line-height: 1.85;
   color: #334155;

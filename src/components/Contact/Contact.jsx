@@ -277,7 +277,7 @@ export default function Contact() {
             <h2 className="contact-location__title">Our Location</h2>
             <p className="contact-location__text">
               Hosted at Rajagiri School of Engineering &amp; Technology,
-              Kakkanad, Kochi, on August 31, 2026 at 3:00 PM IST.
+              Kakkanad, Kochi, on August 31, 2026 at 4:00 PM IST.
             </p>
           </div>
 

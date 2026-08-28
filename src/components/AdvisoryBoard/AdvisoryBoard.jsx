@@ -65,6 +65,9 @@ function PersonCardSpotlight({ member }) {
             src={member.imageUrl}
             alt={member.name}
             className="ab-card__img"
+            loading="lazy"
+            decoding="async"
+            style={member.imageStyle || (member.imagePosition ? { objectPosition: member.imagePosition } : undefined)}
           />
         ) : (
           <span className="ab-card__monogram">{initials(member.name)}</span>
@@ -91,6 +94,9 @@ function PersonCardPremium({ member }) {
             src={member.imageUrl}
             alt={member.name}
             className="ab-card__img"
+            loading="lazy"
+            decoding="async"
+            style={member.imageStyle || (member.imagePosition ? { objectPosition: member.imagePosition } : undefined)}
           />
         ) : (
           <span className="ab-card__monogram">{initials(member.name)}</span>
@@ -117,6 +123,9 @@ function PersonCardStandard({ member }) {
             src={member.imageUrl}
             alt={member.name}
             className="ab-card__img"
+            loading="lazy"
+            decoding="async"
+            style={member.imageStyle || (member.imagePosition ? { objectPosition: member.imagePosition } : undefined)}
           />
         ) : (
           <span className="ab-card__monogram">{initials(member.name)}</span>
@@ -143,6 +152,9 @@ function PersonCardCompact({ member }) {
             src={member.imageUrl}
             alt={member.name}
             className="ab-card__img"
+            loading="lazy"
+            decoding="async"
+            style={member.imageStyle || (member.imagePosition ? { objectPosition: member.imagePosition } : undefined)}
           />
         ) : (
           <span className="ab-card__monogram">{initials(member.name)}</span>

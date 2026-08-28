@@ -50,7 +50,7 @@ export default function Countdown() {
         <h2 className="countdown__title">Confluence Countdown Begins</h2>
         <p className="countdown__subtitle">
           Confluence 3.0 opens on August 31, 2026 at 4:00 PM IST at Rajagiri
-          Valley, Kakkanad.
+          School of Engineering & Technology, Kakkanad.
         </p>
 
         {hasStarted ? (

@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import { Ticket } from "lucide-react";
 import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar.jsx";
 import Hero from "./components/Hero/Hero.jsx";
@@ -9,12 +11,19 @@ import Contact from "./components/Contact/Contact.jsx";
 import AdvisoryBoard from "./components/AdvisoryBoard/AdvisoryBoard.jsx";
 import Speakers from "./components/Speakers/Speakers.jsx";
 import Tickets from "./components/Tickets/Tickets.jsx";
+import Sponsors from "./components/Sponsors/Sponsors.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 
 function Home() {
   return (
     <>
       <Hero />
+      <div style={{ display: "flex", justifyContent: "center", padding: "2.5rem 1rem" }}>
+        <Link to="/tickets" className="hero__cta" style={{ position: "static", transform: "none" }}>
+          <Ticket className="hero__cta-icon" />
+          Get Summit Pass
+        </Link>
+      </div>
       <Program />
       <Countdown />
       <Register />
@@ -72,6 +81,7 @@ export default function App() {
           <Route path="/advisory-board" element={<AdvisoryBoard />} />
           <Route path="/speakers" element={<Speakers />} />
           <Route path="/tickets" element={<Tickets />} />
+          <Route path="/sponsors" element={<Sponsors />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </main>

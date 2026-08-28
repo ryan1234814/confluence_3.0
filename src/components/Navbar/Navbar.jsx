@@ -8,8 +8,7 @@ const NAV_LINKS = [
   { label: "Workshops", href: "#workshops" },
   { label: "Advisory Board", path: "/advisory-board" },
   { label: "Speakers", path: "/speakers" },
-  { label: "Sponsors", href: "#sponsors" },
-  { label: "Media", href: "#media" },
+  { label: "Sponsors/Partners", path: "/sponsors" },
   { label: "Tickets", path: "/tickets" },
   { label: "Contact", path: "/contact" },
 ];

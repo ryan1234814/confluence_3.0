@@ -27,6 +27,26 @@ function LinkedinIcon(props) {
   );
 }
 
+function YoutubeIcon(props) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      {...props}
+    >
+      <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z" />
+      <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" />
+    </svg>
+  );
+}
+
 /* ================================================================== */
 /*  Utility: initials for monogram fallback                            */
 /* ================================================================== */
@@ -54,6 +74,9 @@ function SpeakerCard({ speaker }) {
             src={speaker.image}
             alt={speaker.name}
             className="speaker-card__photo"
+            loading="lazy"
+            decoding="async"
+            style={speaker.imageStyle || (speaker.imagePosition ? { objectPosition: speaker.imagePosition } : undefined)}
           />
         ) : (
           <div className="speaker-card__monogram" aria-hidden="true">
@@ -93,6 +116,17 @@ function SpeakerCard({ speaker }) {
             <LinkedinIcon aria-hidden="true" />
           </a>
         )}
+        {speaker.youtubeUrl && (
+          <a
+            href={speaker.youtubeUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="speaker-card__youtube"
+            aria-label={`YouTube channel of ${speaker.name}`}
+          >
+            <YoutubeIcon aria-hidden="true" />
+          </a>
+        )}
       </div>
     </article>
   );
@@ -125,6 +159,8 @@ function FeaturedSpeaker({ speaker }) {
             src={speaker.image}
             alt={speaker.name}
             className="featured-speaker__photo"
+            loading="lazy"
+            decoding="async"
           />
         ) : (
           <div className="featured-speaker__monogram" aria-hidden="true">
@@ -173,11 +209,17 @@ function FeaturedSpeaker({ speaker }) {
 /*  SpeakersPage (main export)                                         */
 /* ================================================================== */
 
-const FEATURED_IDS = ["speaker-1", "speaker-2"];
+const VIP_IDS = ["speaker-1", "speaker-2", "speaker-3"];
+const MINISTER_IDS = ["speaker-3a", "speaker-3b"];
 
 export default function SpeakersPage() {
-  const featured = SPEAKERS.filter((s) => FEATURED_IDS.includes(s.id));
-  const rest = SPEAKERS.filter((s) => !FEATURED_IDS.includes(s.id));
+  const vipSpeakers = SPEAKERS.filter((s) => VIP_IDS.includes(s.id));
+  const ministers = SPEAKERS.filter((s) => MINISTER_IDS.includes(s.id));
+  const rest = SPEAKERS.filter((s) => !VIP_IDS.includes(s.id) && !MINISTER_IDS.includes(s.id));
+
+  const vp = vipSpeakers.find((s) => s.id === "speaker-1");
+  const governor = vipSpeakers.find((s) => s.id === "speaker-2");
+  const cm = vipSpeakers.find((s) => s.id === "speaker-3");
 
   return (
     <>
@@ -185,11 +227,22 @@ export default function SpeakersPage() {
 
       <section className="institution">
         <div className="institution__container">
-          {/* Featured speakers — stacked vertically */}
-          <div className="featured-speakers">
-            {featured.map((speaker) => (
-              <FeaturedSpeaker key={speaker.id} speaker={speaker} />
-            ))}
+          {/* VIP speakers: VP centered, Governor & CM side by side */}
+          <div className="vip-speakers">
+            {vp && <FeaturedSpeaker speaker={vp} />}
+            <div className="vip-speakers__pair">
+              {governor && <FeaturedSpeaker speaker={governor} />}
+              {cm && <FeaturedSpeaker speaker={cm} />}
+            </div>
+          </div>
+
+          {/* Ministers row */}
+          <div className="vip-speakers">
+            <div className="vip-speakers__pair">
+              {ministers.map((speaker) => (
+                <FeaturedSpeaker key={speaker.id} speaker={speaker} />
+              ))}
+            </div>
           </div>
 
           {/* Remaining speakers — grid */}

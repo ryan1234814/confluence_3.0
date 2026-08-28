@@ -24,7 +24,7 @@ const COMMITTEE = [
     variant: "premium",
     members: [
       {
-        name: "Rev. Dr. Prasant Palakkapillil CMI",
+        name: "Rev. Dr. Prashant Palakkappillil CMI",
         designation: "Director",
         organization: "Rajagiri School of Engineering & Technology (RSET), Kochi",
         imageUrl: "/AdvisoryBoard/Palackappillil.png",
@@ -81,7 +81,7 @@ const COMMITTEE = [
       {
         name: "Mr. Saji S",
         designation: "CEO, KEID",
-        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkISVocmQAI7MbWS0vY7oX_eQBa_3a4zAOgA_ULxLjNg&s",
+        imageUrl: "/AdvisoryBoard/saji_s.jpg",
         linkedinUrl: "",
       },
       {
@@ -97,6 +97,12 @@ const COMMITTEE = [
         linkedinUrl: "",
       },
       {
+        name: "Mr. Arun Narayan Thekkethil",
+        designation: "Center Head – Kochi, Tata Consultancy Services (TCS)",
+        imageUrl: "https://media.licdn.com/dms/image/v2/D5603AQHz3iB2MmW0rA/profile-displayphoto-crop_800_800/B56Z60moPXJ4AI-/0/1781146486717?e=1789603200&v=beta&t=25zsSQsN2isFAJ-Rm2YiyjMjgf7fr78sc3QolkwAYBg",
+        linkedinUrl: "https://www.linkedin.com/in/arun-narayan-thekkethil-260b661a/",
+      },
+      {
         name: "Mr. Sreekumar V",
         designation: "Centre Head, TATA ELXSI & Secretary, GTech",
         imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1LUAGKtpQxlVzn-ZRF4ZJbZ4Uu_0dDqy3PmNXLsgWzQ&s=10",
@@ -105,20 +111,20 @@ const COMMITTEE = [
       {
         name: "Mr. Deepu S. Nath",
         designation: "MD, Faya Innovations & Convenor, GTech ATFG",
-        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjEYqcI-Q1EO__GuWnH1p34PWeKKAU8A7GBi-X_IRmxA&s=10",
+        imageUrl: "https://media.licdn.com/dms/image/v2/D5603AQGskXO_nz3M4Q/profile-displayphoto-crop_800_800/B56Z61XYyOIoAI-/0/1781159270290?e=1788998400&v=beta&t=y-k82vvdYQ6R2L5GsrojXuoJ__xDvPTvcGM_GxA7wsY",
         linkedinUrl: "https://www.linkedin.com/in/deepusnath",
       },
       {
         name: "Mr. Thomas John",
         designation: "MD, Agappe Diagnostics Ltd",
-        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_kh0KI9uR5OuPX9ddlvoPZpDcZ6nHx0iYkzogMJRBeQ&s=10",
+        imageUrl: "https://media.licdn.com/dms/image/v2/D5603AQHtbBEXmp4LUA/profile-displayphoto-crop_800_800/B56ZwNQohYJEAI-/0/1769748991807?e=1788998400&v=beta&t=cwaVzTGsxfXNBceYSh3Ih32qIoE6h8WX9KznNbnzO6c",
         linkedinUrl: "https://www.linkedin.com/in/thomas-john-78960a25",
       },
       {
         name: "Dr. Ujjwal K Bhattacharya",
         designation: "MD, Steag Energy Services India",
-        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSafW6TNgKEKBrqp-8wT4Cqket05VgAHjSmYZkcZ-9tqg&s=10",
-        linkedinUrl: "https://www.linkedin.com/in/jacob-thottungal-verghese-38448494",
+        imageUrl: "https://media.licdn.com/dms/image/v2/C5103AQExlxZnwmY0Ig/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1561657389660?e=1788998400&v=beta&t=pQEjmkQhM_aiIFE8DLbZOnzqdfLUSeADfMiscoXdCVM",
+        linkedinUrl: "https://www.linkedin.com/in/ujjwal-bhattacharya-a43437106/",
       },
       {
         name: "Mr. Rajeev Sreenivas",
@@ -127,10 +133,10 @@ const COMMITTEE = [
         linkedinUrl: "https://www.linkedin.com/in/rajeevsrinivas",
       },
       {
-        name: "Mr. Sudheer",
+        name: "Sudheer Kareem",
         designation: "Transformation Leader, IBM Kochi",
-        imageUrl: "https://media.licdn.com/dms/image/v2/D5603AQEbgOTGnarlvg/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1699120313714?e=2147483647&v=beta&t=lMzJRuATFzE8FBX952OCzCRTkGHtEQPiWnQ7xU3I2Sk",
-        linkedinUrl: "",
+        imageUrl: "https://media.licdn.com/dms/image/v2/D4E03AQGXVcQ1S_RI8w/profile-displayphoto-scale_400_400/B4EZ3OKCxiHcAo-/0/1777280238396?e=1788998400&v=beta&t=WSU7Vi3EvHUYKJ6NVFFPInH6emLeM2c8HQbf4bzwwos",
+        linkedinUrl: "https://www.linkedin.com/in/sudheerkareem/",
       },
       {
         name: "Mr. Richard Antony",
@@ -141,14 +147,8 @@ const COMMITTEE = [
       {
         name: "Mr. Vinod V S",
         designation: "Senior Manager, EY GDS",
-        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2Hj2gXIf_rQ-F_NhBjvv-stTRaiPAF2oy0-W0q1jX1A&s=10",
+        imageUrl: "https://media.licdn.com/dms/image/v2/D5603AQGasicaAAaseQ/profile-displayphoto-crop_800_800/B56Z14AXBHKQAM-/0/1775834857183?e=1788998400&v=beta&t=Jp3iBspjQbGuYH-maesyAp3OiWgJw54svCGIXzWauk4",
         linkedinUrl: "https://www.linkedin.com/in/vsvinod",
-      },
-      {
-        name: "Mr. Binu Sankar",
-        designation: "Senior Manager, EY GDS, Operations",
-        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ96_t6dqmTU7K5SXVMiAVMMLVLuLDe3TxxbSeks5NLCQ&s=10",
-        linkedinUrl: "",
       },
       {
         name: "Ms. Nazneen Jehangir",
@@ -175,6 +175,12 @@ const COMMITTEE = [
         linkedinUrl: "https://www.linkedin.com/in/rijinjohn",
       },
       {
+        name: "Mr. Jijo John",
+        designation: "Chairman GTech & CEO Calpine Group",
+        imageUrl: "/AdvisoryBoard/jijo_john.jpeg",
+        linkedinUrl: "https://www.linkedin.com/in/jijogjohn/",
+      },
+      {
         name: "Mr. Jakes Bejoy",
         designation: "Music Director & Alumni, RSET",
         imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmTJXaT6QhAscV8SROgfC7h4T-YTzkZXNPXesA5X04pg&s=10",
@@ -193,12 +199,6 @@ const COMMITTEE = [
         linkedinUrl: "https://www.linkedin.com/in/sebastian-thomas-8a87b3122",
       },
       {
-        name: "Mr. Nijo Pothen",
-        designation: "Technology Business Relationship Manager, S2P - GDS Operations, EYGBS (India) LLP",
-        imageUrl: "",
-        linkedinUrl: "https://www.linkedin.com/in/nijo-p-pothen-2395366",
-      },
-      {
         name: "Mr. Anish Varghese",
         designation: "Lead Engineer, UVJ Technologies Pvt Ltd, Progressive Techies",
         imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQY0W7XQBRqXgV6w3FZ1Cq5ud29kf1DBHQTVcf4okId1g&s=10",
@@ -213,7 +213,7 @@ const COMMITTEE = [
       {
         name: "Athul Ram",
         designation: "CEO, Verdatum AI",
-        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVJg8onE5KqdrUqMbkSt6GqXc5aR6jIHRyL1otRAhclA&s=10",
+        imageUrl: "/AdvisoryBoard/athul_ram.jpeg",
         linkedinUrl: "https://www.linkedin.com/in/athulram/",
       },
       {
@@ -225,8 +225,8 @@ const COMMITTEE = [
       {
         name: "Mr. Arun Kumar T V",
         designation: "CEO, Saasvaap & PTA President",
-        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRrmrmz7U3W031yPLgPglEZkBGvsUXLXgpllP2WkVLFw&s",
-        linkedinUrl: "",
+        imageUrl: "https://media.licdn.com/dms/image/v2/D5603AQFqmSNMtJzaHg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1693396616721?e=1788998400&v=beta&t=WMvsvnbakuPLMYcPRa6AiZmWcCG28ZTdk0thW9R5iOU",
+        linkedinUrl: "https://media.licdn.com/dms/image/v2/D5603AQFqmSNMtJzaHg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1693396616721?e=1788998400&v=beta&t=WMvsvnbakuPLMYcPRa6AiZmWcCG28ZTdk0thW9R5iOU",
       },
       {
         name: "Mr. Muhammed Shafeeq N",
@@ -237,7 +237,7 @@ const COMMITTEE = [
       {
         name: "Anilkumar G",
         designation: "Executive Director, BNI Cochin",
-        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKH6kpplrZxKhDXy57SKwaj1MNN4YTSVk1DhvREH77EA&s=10",
+        imageUrl: "https://media.licdn.com/dms/image/v2/D5603AQGD0Xh6_Upr8g/profile-displayphoto-scale_400_400/B56Z25Bv4tIsAg-/0/1776925742224?e=1788998400&v=beta&t=ExRcNey-movLwX5Y2ZGgHV72bqmYftulkpHxBmFunVo",
         linkedinUrl: "https://www.linkedin.com/in/anilg-actionrich/",
       },
       {
@@ -249,7 +249,7 @@ const COMMITTEE = [
       {
         name: "Mr. Abdul Rahman",
         designation: "Director & COO, Lulu IT Parks",
-        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLzJ_11cFdw06ZoWmP5hHJTriSclOPAgzlx_FYOQIGJQ&s=10",
+        imageUrl: "/AdvisoryBoard/abdul_rahman.jpeg",
         linkedinUrl: "",
       },
       {
