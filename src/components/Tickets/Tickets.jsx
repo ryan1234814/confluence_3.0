@@ -52,26 +52,27 @@ export default function Tickets() {
   }, []);
 
   return (
-    <section id="tickets" className="tickets">
-      <div className="tickets__container">
-        <div className="tickets__header">
-          <img
-            src={`${import.meta.env.BASE_URL}head/register.webp`}
-            alt=""
-            className="tickets__header-bg"
-          />
-          <div className="tickets__header-overlay" />
-          <div className="tickets__header-content">
-            <p className="tickets__eyebrow">Registration Passes</p>
-            <h1 className="tickets__title">Confluence 3.0 Tickets</h1>
-            <p className="tickets__subtitle">
-              Choose the badge that suits your role and secure your seat at the
-              largest industry–academia summit.
-            </p>
-          </div>
+    <>
+      <section className="tickets-hero">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9787NyA3srd_IUfnMQC9LhaKthjDB_Z3R4K9UsfgIK7eMmGbhB2kYkDTW&s=10"
+          alt=""
+          className="tickets-hero__bg"
+        />
+        <div className="tickets-hero__overlay" />
+        <div className="tickets-hero__content">
+          <p className="tickets-hero__eyebrow">Registration Passes</p>
+          <h1 className="tickets-hero__title">Confluence 3.0 Tickets</h1>
+          <p className="tickets-hero__subtitle">
+            Choose the badge that suits your role and secure your seat at the
+            largest industry–academia summit.
+          </p>
         </div>
+      </section>
 
-        <div className="tickets__grid">
+      <section id="tickets" className="tickets">
+        <div className="tickets__container">
+          <div className="tickets__grid">
           {TICKETS.map(({ id, image, alt, title, forText, color, features }) => (
             <div key={id} className="tickets__flip-wrapper" onClick={() => handleTouch(id)}>
               <div className={`tickets__flip-card${flippedId === id ? " is-flipped" : ""}`}>
@@ -122,5 +123,6 @@ export default function Tickets() {
 
       </div>
     </section>
+    </>
   );
 }

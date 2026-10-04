@@ -161,6 +161,29 @@
   flex-shrink: 0;
 }
 
+.program__event-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.625rem 1.75rem;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #0c1629;
+  background: linear-gradient(135deg, #5eead4, #2dd4bf);
+  border: none;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 250ms ease, transform 250ms ease, box-shadow 250ms ease;
+}
+
+.program__event-btn:hover {
+  background: linear-gradient(135deg, #2dd4bf, #14b8a6);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px -2px rgba(94, 234, 212, 0.35);
+}
+
 .program__event-card:hover {
   transform: translateY(-4px);
   box-shadow:

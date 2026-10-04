@@ -150,7 +150,7 @@ export default function Sponsors() {
 
       {/* Tier sections */}
       {SPONSORS.map((tier) =>
-        tier.tier === "silver-partners" || tier.tier === "platinum" ? (
+        tier.tier === "silver-partners" || tier.tier === "hydration" ? (
           <SilverPartnersTier key={tier.id} tier={tier} />
         ) : (
           <SponsorsTier key={tier.id} tier={tier} />

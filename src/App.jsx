@@ -12,6 +12,10 @@ import AdvisoryBoard from "./components/AdvisoryBoard/AdvisoryBoard.jsx";
 import Speakers from "./components/Speakers/Speakers.jsx";
 import Tickets from "./components/Tickets/Tickets.jsx";
 import Sponsors from "./components/Sponsors/Sponsors.jsx";
+import Workshop from "./components/Workshop/Workshop.jsx";
+import FindWorkshopPage from "./components/FindWorkshop/FindWorkshop.jsx";
+import Day1Page from "./components/Day1/Day1.jsx";
+import Day2Page from "./components/Day2/Day2.jsx";
 import Footer from "./components/Footer/Footer.jsx";
 
 function Home() {
@@ -82,6 +86,10 @@ export default function App() {
           <Route path="/speakers" element={<Speakers />} />
           <Route path="/tickets" element={<Tickets />} />
           <Route path="/sponsors" element={<Sponsors />} />
+          <Route path="/workshops" element={<Workshop />} />
+          <Route path="/venue" element={<FindWorkshopPage />} />
+          <Route path="/day1" element={<Day1Page />} />
+          <Route path="/day2" element={<Day2Page />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </main>

@@ -18,6 +18,7 @@ function LinkedinIcon(props) {
     </svg>
   );
 }
+import { useState } from "react";
 import COMMITTEE from "./advisoryBoardData.js";
 import "./AdvisoryBoard.css";
 
@@ -32,6 +33,39 @@ function initials(name) {
     .join("")
     .slice(0, 2)
     .toUpperCase();
+}
+
+/* ------------------------------------------------------------------ */
+/*  Avatar with graceful fallback on broken external URLs              */
+/*  LinkedIn CDN (media.licdn.com) and Google encrypted-tbn URLs      */
+/*  expire / block hotlinking (403, CORS, referrer checks).           */
+/*  On error we swap to monogram instead of showing broken <img>.     */
+/* ------------------------------------------------------------------ */
+function Avatar({ member, variantClass }) {
+  const [failed, setFailed] = useState(false);
+  const showImg = member.imageUrl && !failed;
+
+  return (
+    <div className={`ab-card__avatar ${variantClass}`}>
+      {showImg ? (
+        <img
+          src={member.imageUrl}
+          alt={member.name}
+          className="ab-card__img"
+          loading="lazy"
+          decoding="async"
+          referrerPolicy="no-referrer"
+          onError={() => setFailed(true)}
+          style={
+            member.imageStyle ||
+            (member.imagePosition ? { objectPosition: member.imagePosition } : undefined)
+          }
+        />
+      ) : (
+        <span className="ab-card__monogram">{initials(member.name)}</span>
+      )}
+    </div>
+  );
 }
 
 /* ------------------------------------------------------------------ */
@@ -59,20 +93,7 @@ function LinkedInLink({ member }) {
 function PersonCardSpotlight({ member }) {
   return (
     <article className="ab-card ab-card--spotlight">
-      <div className="ab-card__avatar ab-card__avatar--spotlight">
-        {member.imageUrl ? (
-          <img
-            src={member.imageUrl}
-            alt={member.name}
-            className="ab-card__img"
-            loading="lazy"
-            decoding="async"
-            style={member.imageStyle || (member.imagePosition ? { objectPosition: member.imagePosition } : undefined)}
-          />
-        ) : (
-          <span className="ab-card__monogram">{initials(member.name)}</span>
-        )}
-      </div>
+      <Avatar member={member} variantClass="ab-card__avatar--spotlight" />
       <div className="ab-card__body ab-card__body--spotlight">
         <h3 className="ab-card__name ab-card__name--spotlight">{member.name}</h3>
         <p className="ab-card__designation">{member.designation}</p>
@@ -88,20 +109,7 @@ function PersonCardSpotlight({ member }) {
 function PersonCardPremium({ member }) {
   return (
     <article className="ab-card ab-card--premium">
-      <div className="ab-card__avatar ab-card__avatar--premium">
-        {member.imageUrl ? (
-          <img
-            src={member.imageUrl}
-            alt={member.name}
-            className="ab-card__img"
-            loading="lazy"
-            decoding="async"
-            style={member.imageStyle || (member.imagePosition ? { objectPosition: member.imagePosition } : undefined)}
-          />
-        ) : (
-          <span className="ab-card__monogram">{initials(member.name)}</span>
-        )}
-      </div>
+      <Avatar member={member} variantClass="ab-card__avatar--premium" />
       <div className="ab-card__body">
         <h3 className="ab-card__name">{member.name}</h3>
         <p className="ab-card__designation">{member.designation}</p>
@@ -117,20 +125,7 @@ function PersonCardPremium({ member }) {
 function PersonCardStandard({ member }) {
   return (
     <article className="ab-card ab-card--standard">
-      <div className="ab-card__avatar ab-card__avatar--standard">
-        {member.imageUrl ? (
-          <img
-            src={member.imageUrl}
-            alt={member.name}
-            className="ab-card__img"
-            loading="lazy"
-            decoding="async"
-            style={member.imageStyle || (member.imagePosition ? { objectPosition: member.imagePosition } : undefined)}
-          />
-        ) : (
-          <span className="ab-card__monogram">{initials(member.name)}</span>
-        )}
-      </div>
+      <Avatar member={member} variantClass="ab-card__avatar--standard" />
       <div className="ab-card__body">
         <h3 className="ab-card__name">{member.name}</h3>
         <p className="ab-card__designation">{member.designation}</p>
@@ -146,20 +141,7 @@ function PersonCardStandard({ member }) {
 function PersonCardCompact({ member }) {
   return (
     <article className="ab-card ab-card--compact">
-      <div className="ab-card__avatar ab-card__avatar--compact">
-        {member.imageUrl ? (
-          <img
-            src={member.imageUrl}
-            alt={member.name}
-            className="ab-card__img"
-            loading="lazy"
-            decoding="async"
-            style={member.imageStyle || (member.imagePosition ? { objectPosition: member.imagePosition } : undefined)}
-          />
-        ) : (
-          <span className="ab-card__monogram">{initials(member.name)}</span>
-        )}
-      </div>
+      <Avatar member={member} variantClass="ab-card__avatar--compact" />
       <div className="ab-card__body">
         <h3 className="ab-card__name">{member.name}</h3>
         <p className="ab-card__designation">{member.designation}</p>

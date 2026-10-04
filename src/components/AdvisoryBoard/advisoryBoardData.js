@@ -45,7 +45,7 @@ const COMMITTEE = [
       {
         name: "Rev. Dr. Jaison Paul Mulerikkal CMI",
         designation: "Principal, RSET",
-        imageUrl: "https://media.licdn.com/dms/image/v2/C4E03AQH8_NMpYnN_FQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1516324377983?e=1788998400&v=beta&t=Y17MiEX5aAiXJIKmSptuZN4OsZ0B9jRzj1YiVLE8gr8",
+        imageUrl: "/AdvisoryBoard/jaison_paul.png",
         linkedinUrl: "https://www.linkedin.com/in/jaisonmpaul/",
       },
       {
@@ -57,25 +57,25 @@ const COMMITTEE = [
       {
         name: "Mr. Loknath Behara, IPS",
         designation: "MD, KMRL & KWML",
-        imageUrl: "https://media.licdn.com/dms/image/v2/D5603AQGS4AntQ2kFMA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1722329883510?e=1788998400&v=beta&t=l4TB39Ul0RnVw1HggIfC5jfzG6bhQvemtj7D4_6L61k",
-        linkedinUrl: "",
+        imageUrl: "/AdvisoryBoard/loknath_behara.png",
+        linkedinUrl: "https://www.linkedin.com/in/loknath-behera-980553320/",
       },
       {
         name: "Mr. Susanth Kuruntil",
         designation: "CEO, InfoPark, Kochi",
-        imageUrl: "https://cf-images.assettype.com/TNIE%2Fimport%2F2023%2F7%2F23%2Foriginal%2FSusanth_Kurunthil_EPS84515.jpg?w=1024&auto=format%2Ccompress&fit=max",
+        imageUrl: "/AdvisoryBoard/susanth_Kurunthil.png",
         linkedinUrl: "https://www.linkedin.com/in/susanthk",
       },
       {
         name: "Mr. Sandeep Kumar, IAS",
         designation: "CEO, Technopark, Kerala",
-        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRe8oSoLeQAlDx1OkSwEf7GEc7K6uBqPH0HrejcyOzmPZ2izf90YJWE1Sg&s=10",
+        imageUrl: "/AdvisoryBoard/sandip_kumar.png",
         linkedinUrl: "https://linkedin.com/in/sandip-kumar-ias-129386396",
       },
       {
         name: "Mr. Anoop Ambika",
         designation: "CEO, KSUM",
-        imageUrl: "https://th-i.thgim.com/public/news/national/kerala/3yxew9/article65627078.ece/alternates/FREE_1200/Anoop%20Ambika-2.jpg",
+        imageUrl: "/AdvisoryBoard/anoop_ambika.png",
         linkedinUrl: "https://www.linkedin.com/in/anoopambika",
       },
       {
@@ -87,7 +87,7 @@ const COMMITTEE = [
       {
         name: "Dr. John Jose",
         designation: "IEEE India Council",
-        imageUrl: "https://www.iitg.ac.in/johnjose/John_2020.jpg",
+        imageUrl: "/AdvisoryBoard/John_Jose.png",
         linkedinUrl: "https://www.linkedin.com/in/john-jose-bb8431106",
       },
       {
@@ -99,67 +99,67 @@ const COMMITTEE = [
       {
         name: "Mr. Arun Narayan Thekkethil",
         designation: "Center Head – Kochi, Tata Consultancy Services (TCS)",
-        imageUrl: "https://media.licdn.com/dms/image/v2/D5603AQHz3iB2MmW0rA/profile-displayphoto-crop_800_800/B56Z60moPXJ4AI-/0/1781146486717?e=1789603200&v=beta&t=25zsSQsN2isFAJ-Rm2YiyjMjgf7fr78sc3QolkwAYBg",
+        imageUrl: "/AdvisoryBoard/arun_narayan.png",
         linkedinUrl: "https://www.linkedin.com/in/arun-narayan-thekkethil-260b661a/",
       },
       {
         name: "Mr. Sreekumar V",
         designation: "Centre Head, TATA ELXSI & Secretary, GTech",
-        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1LUAGKtpQxlVzn-ZRF4ZJbZ4Uu_0dDqy3PmNXLsgWzQ&s=10",
+        imageUrl: "/AdvisoryBoard/sreekumar_v.png",
         linkedinUrl: "https://www.linkedin.com/in/sreekumarv",
       },
       {
         name: "Mr. Deepu S. Nath",
         designation: "MD, Faya Innovations & Convenor, GTech ATFG",
-        imageUrl: "https://media.licdn.com/dms/image/v2/D5603AQGskXO_nz3M4Q/profile-displayphoto-crop_800_800/B56Z61XYyOIoAI-/0/1781159270290?e=1788998400&v=beta&t=y-k82vvdYQ6R2L5GsrojXuoJ__xDvPTvcGM_GxA7wsY",
+        imageUrl: "/AdvisoryBoard/deepu_s_nath.png",
         linkedinUrl: "https://www.linkedin.com/in/deepusnath",
       },
       {
         name: "Mr. Thomas John",
         designation: "MD, Agappe Diagnostics Ltd",
-        imageUrl: "https://media.licdn.com/dms/image/v2/D5603AQHtbBEXmp4LUA/profile-displayphoto-crop_800_800/B56ZwNQohYJEAI-/0/1769748991807?e=1788998400&v=beta&t=cwaVzTGsxfXNBceYSh3Ih32qIoE6h8WX9KznNbnzO6c",
+        imageUrl: "/AdvisoryBoard/thomas_john.png",
         linkedinUrl: "https://www.linkedin.com/in/thomas-john-78960a25",
       },
       {
         name: "Dr. Ujjwal K Bhattacharya",
         designation: "MD, Steag Energy Services India",
-        imageUrl: "https://media.licdn.com/dms/image/v2/C5103AQExlxZnwmY0Ig/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1561657389660?e=1788998400&v=beta&t=pQEjmkQhM_aiIFE8DLbZOnzqdfLUSeADfMiscoXdCVM",
+        imageUrl: "/AdvisoryBoard/ujjwal.png",
         linkedinUrl: "https://www.linkedin.com/in/ujjwal-bhattacharya-a43437106/",
       },
       {
         name: "Mr. Rajeev Sreenivas",
         designation: "Region Head, Academic Alliances, TCS, Kochi",
-        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBATB2C1mtVYcgETN6bPeHDrpt_46srMJxGu53vnnF_w&s=10",
+        imageUrl: "/AdvisoryBoard/rajeev_srinivas.png",
         linkedinUrl: "https://www.linkedin.com/in/rajeevsrinivas",
       },
       {
         name: "Sudheer Kareem",
         designation: "Transformation Leader, IBM Kochi",
-        imageUrl: "https://media.licdn.com/dms/image/v2/D4E03AQGXVcQ1S_RI8w/profile-displayphoto-scale_400_400/B4EZ3OKCxiHcAo-/0/1777280238396?e=1788998400&v=beta&t=WSU7Vi3EvHUYKJ6NVFFPInH6emLeM2c8HQbf4bzwwos",
+        imageUrl: "/AdvisoryBoard/sudheer_kareem.png",
         linkedinUrl: "https://www.linkedin.com/in/sudheerkareem/",
       },
       {
         name: "Mr. Richard Antony",
         designation: "Executive Director, EY GDS, Transformation and India Location Leader",
-        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4Bay56Pd3EHAV80P6eLt3gPEkeKx-PbegQ-dVgHsZbw&s=10",
+        imageUrl: "/AdvisoryBoard/richard_antony.png",
         linkedinUrl: "https://www.linkedin.com/in/richard-antony-6305784",
       },
       {
         name: "Mr. Vinod V S",
         designation: "Senior Manager, EY GDS",
-        imageUrl: "https://media.licdn.com/dms/image/v2/D5603AQGasicaAAaseQ/profile-displayphoto-crop_800_800/B56Z14AXBHKQAM-/0/1775834857183?e=1788998400&v=beta&t=Jp3iBspjQbGuYH-maesyAp3OiWgJw54svCGIXzWauk4",
+        imageUrl: "/AdvisoryBoard/vinod_vs.png",
         linkedinUrl: "https://www.linkedin.com/in/vsvinod",
       },
       {
         name: "Ms. Nazneen Jehangir",
         designation: "Executive Director & CEO (Software Business), NeST Group",
-        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM3MpZMWL0XePCAZzWDal_g2cHRthsoBYevah4wfPlQw&s=10",
+        imageUrl: "/AdvisoryBoard/nazneen_jehangir.png",
         linkedinUrl: "https://www.linkedin.com/in/nazneen-jehangir-9735032b",
       },
       {
         name: "Mr. Altaf Jehangir",
         designation: "CEO & Executive Director, NeST Sfo Technologies",
-        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ71uJ9_Vhd9IsxPPX5ILDlx9C55K4Dx3OqKcQ358E35w&s=10",
+        imageUrl: "/AdvisoryBoard/althaf_jehangir.png",
         linkedinUrl: "https://www.linkedin.com/in/althaf-jehangir-309ab810",
       },
       {
@@ -207,7 +207,7 @@ const COMMITTEE = [
       {
         name: "B S Manoj",
         designation: "IEEE Kerala Section",
-        imageUrl: "",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStTsCkf0zRBXzWaZ8FtoHLw9YXAnzBZr3YdOIJPVlaog&s",
         linkedinUrl: "",
       },
       {
@@ -225,8 +225,8 @@ const COMMITTEE = [
       {
         name: "Mr. Arun Kumar T V",
         designation: "CEO, Saasvaap & PTA President",
-        imageUrl: "https://media.licdn.com/dms/image/v2/D5603AQFqmSNMtJzaHg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1693396616721?e=1788998400&v=beta&t=WMvsvnbakuPLMYcPRa6AiZmWcCG28ZTdk0thW9R5iOU",
-        linkedinUrl: "https://media.licdn.com/dms/image/v2/D5603AQFqmSNMtJzaHg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1693396616721?e=1788998400&v=beta&t=WMvsvnbakuPLMYcPRa6AiZmWcCG28ZTdk0thW9R5iOU",
+        imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTocswB__Dzu7alq1X8aeV5KZufKa4aD1act5TxJFDUNA&s",
+        linkedinUrl: "",
       },
       {
         name: "Mr. Muhammed Shafeeq N",
@@ -237,7 +237,7 @@ const COMMITTEE = [
       {
         name: "Anilkumar G",
         designation: "Executive Director, BNI Cochin",
-        imageUrl: "https://media.licdn.com/dms/image/v2/D5603AQGD0Xh6_Upr8g/profile-displayphoto-scale_400_400/B56Z25Bv4tIsAg-/0/1776925742224?e=1788998400&v=beta&t=ExRcNey-movLwX5Y2ZGgHV72bqmYftulkpHxBmFunVo",
+        imageUrl: "/AdvisoryBoard/anilkumar.png",
         linkedinUrl: "https://www.linkedin.com/in/anilg-actionrich/",
       },
       {
@@ -269,6 +269,43 @@ const COMMITTEE = [
         designation: "Founder & CEO, Cubet Techno Labs",
         imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhNu_NlWDXFky_ceZTvTab0VoX3rHjI57KoZxrcJWzOQ&s=10",
         linkedinUrl: "https://www.linkedin.com/in/lovegin/",
+      },
+    ],
+  },
+  {
+    id: "institutional-representatives",
+    title: "Institutional Representatives",
+    variant: "standard",
+    members: [
+      {
+        name: "Dr. Hari C.V",
+        designation: "Vice Principal, RSET",
+        imageUrl: "/AdvisoryBoard/hari_cv.png",
+        linkedinUrl: "https://www.linkedin.com/in/dr-hari-c-v-b0683564/",
+      },
+      {
+        name: "Mr. Nitheesh Kurian",
+        designation: "Dean - Student Affairs, RSET",
+        imageUrl: "/AdvisoryBoard/niteesh_kurian.png",
+        linkedinUrl: "https://www.linkedin.com/in/nitheesh07/",
+      },
+      {
+        name: "Mr. Vineeth Krishna P.",
+        designation: "Asst Professor ME, RSET",
+        imageUrl: "/AdvisoryBoard/vineeth_krishna.png",
+        linkedinUrl: "https://www.linkedin.com/in/vineeth-krishna-p/",
+      },
+      {
+        name: "Dr. Ranju S. Kartha",
+        designation: "HoD IT, RSET",
+        imageUrl: "/AdvisoryBoard/ranjus_kartha.png",
+        linkedinUrl: "https://www.linkedin.com/in/dr-ranju-s-kartha-b3a16a15a/",
+      },
+      {
+        name: "Ms. Sangeetha Jamal",
+        designation: "Asst Professor CSE, RSET",
+        imageUrl: "/AdvisoryBoard/sangeetha_jamal.png",
+        linkedinUrl: "https://www.linkedin.com/in/sangeetha-jamal-47908249/",
       },
     ],
   },

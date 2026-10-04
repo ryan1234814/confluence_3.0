@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Calendar, Clock } from "lucide-react";
 import "./Program.css";
 
@@ -9,6 +10,7 @@ const EVENTS = [
     date: "31st August 2026",
     time: "4.00pm to 6.00pm",
     image: `${import.meta.env.BASE_URL}home_boxes/box1.jpeg`,
+    to: "/day1",
   },
   {
     id: "day2",
@@ -17,6 +19,7 @@ const EVENTS = [
     date: "1st September 2026",
     time: "9.30am to 4.30pm",
     image: `${import.meta.env.BASE_URL}home_boxes/box2.jpeg`,
+    to: "/day2",
   },
 ];
 
@@ -38,7 +41,7 @@ export default function Program() {
         </div>
 
         <div className="program__events">
-          {EVENTS.map(({ id, day, title, date, time, image }) => (
+          {EVENTS.map(({ id, day, title, date, time, image, to }) => (
             <div key={id} className="program__event-card" style={{ backgroundImage: `url(${image})` }}>
               <div className="program__event-overlay"></div>
               <div className="program__event-content">
@@ -54,6 +57,7 @@ export default function Program() {
                     {time}
                   </span>
                 </div>
+                <Link to={to} className="program__event-btn">View Schedule</Link>
               </div>
             </div>
           ))}

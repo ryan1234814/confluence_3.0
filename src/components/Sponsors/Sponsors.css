@@ -174,12 +174,41 @@
   background: linear-gradient(90deg, #a16207, #92400e);
 }
 
+.sponsors-tier--platinum .sponsors-tier__title {
+  background: linear-gradient(90deg, #71717a, #52525b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .sponsors-tier--gold .sponsors-tier__rule {
   background: linear-gradient(90deg, #b45309, #a16207);
 }
 
+.sponsors-tier--gold .sponsors-tier__title {
+  background: linear-gradient(90deg, #f59e0b, #92400e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 .sponsors-tier--silver .sponsors-tier__rule {
   background: linear-gradient(90deg, #64748b, #475569);
+}
+
+.sponsors-tier--silver .sponsors-tier__title {
+  color: #475569;
+}
+
+.sponsors-tier--hydration .sponsors-tier__title {
+  background: linear-gradient(90deg, #7c3aed, #06b6d4);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sponsors-tier--hydration .sponsors-tier__rule {
+  background: linear-gradient(90deg, #7c3aed, #06b6d4);
 }
 
 .sponsors-tier--community .sponsors-tier__rule {
@@ -201,24 +230,30 @@
   grid-template-columns: 1fr;
 }
 
-/* Gold — 2-col */
+/* Gold — 4-col on desktop, 2-col on mobile */
 .sponsors-tier__grid--gold {
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 64rem;
+  margin-inline: auto;
 }
 
-@media (min-width: 640px) {
+@media (min-width: 1024px) {
   .sponsors-tier__grid--gold {
-    grid-template-columns: repeat(2, 1fr);
-    max-width: 40rem;
-    margin-inline: auto;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
-/* Silver — always 2-col, side by side */
+/* Silver — centered, single logo */
 .sponsors-tier__grid--silver {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   max-width: 34rem;
   margin-inline: auto;
+  justify-items: center;
+}
+
+.sponsors-tier--silver .sponsors-card--bare .sponsors-card__logo {
+  width: 28rem;
+  height: 28rem;
 }
 
 /* Community — 4-col */
@@ -404,10 +439,41 @@
   height: auto;
 }
 
-/* ---- Compact padding for single-logo tiers (Title & Silver) ---- */
+/* ---- Compact padding for single-logo tiers ---- */
 .sponsors-tier--platinum .sponsors-tier__container {
-  padding-block: 0.5rem;
-  max-width: 42rem;
+  padding-block: 1rem;
+}
+
+.sponsors-tier--platinum .sponsors-tier__grid--platinum {
+  justify-items: center;
+}
+
+.sponsors-tier--platinum .sponsors-card--bare .sponsors-card__logo {
+  width: 28rem;
+  height: 28rem;
+  mix-blend-mode: darken;
+}
+
+/* Title Sponsor (first platinum tier) — large blended logo */
+#title-sponsors .sponsors-card--bare .sponsors-card__logo {
+  width: 32rem;
+  height: 32rem;
+  mix-blend-mode: multiply;
+}
+
+#title-sponsors .sponsors-tier__container {
+  padding-block: 1rem;
+}
+
+#title-sponsors .sponsors-tier__header {
+  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+#title-sponsors .sponsors-tier__title {
+  background: none;
+  -webkit-text-fill-color: #0c1629;
+  color: #0c1629;
 }
 
 .sponsors-tier--silver .sponsors-tier__container {
